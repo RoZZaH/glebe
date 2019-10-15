@@ -6,10 +6,11 @@ install:
   - npm install
 script:
   # run generator
-  - npx eleventy
+  - npx eleventy --pathprefix="/glebe/"
   # create .nojekyll files
   # We are telling GitHub to not process this branch using jekyll
   - touch .nojekyll
+  
 deploy:
   provider: pages
   skip_cleanup: true
