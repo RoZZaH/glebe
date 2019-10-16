@@ -13,7 +13,7 @@
     --donegal-green: rgb(12, 87, 9);
     --dark-orange: rgb(211, 69, 3);
     --orange: orange;
-    --offwhite-blue: rgb(232, 244, 247);
+    --offwhite-blue: rgb(255, 244, 233);
   }
 
   * {
@@ -58,7 +58,7 @@
   h3 {
       font-family: 'Lora', serif;
       font-weight: 400;
-      color: var(--dark-blue);
+      color: var(--donegal-green);
       margin-top: 0;
   }
   
@@ -94,9 +94,6 @@
     font-weight: 700;
   }
 
-  
-
-  
   /* type modifiers */
   .site-title {
     text-align: left;
@@ -154,7 +151,6 @@ Layout
 }
 
 header {
- // border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -267,33 +263,36 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-
     text-align: center;
-    //border: 1px solid red;
-    border-bottom: 2px solid var(--offwhite-blue);
 }
 
 nav li {
     background: var(--offwhite-blue);
-    //margin-left: 2em;
     flex: 1;
-    border-left: 1px solid grey;
+    //border-left: 1px solid grey;
     /* https://css-tricks.com/notched-boxes/ || bennettfeely.com/clippy/ */
-    clip-path: polygon(0 0, 90% 0%, 100% 18%, 100% 100%, 0 100%);
+    clip-path: 
+      polygon(
+        0% 0%, /* 0,0 (tl,tl) */
+        calc(100% - 20px) 0%, /* (tr, tr) */
+        calc(100% - 0.5px) 20px, /* (tr, tr) create tiny right gap */
+        calc(100% - 0.5px) 101%, /* (br, br) */
+        0% 101%);  /* (bl, bl) rid of tiny gap */
+    border-bottom: 2px solid var(--offwhite-blue);
 }
 
 nav a {
   z-index: 1;
     display: inline-block;
     text-decoration: none;
-    color: var(--grey);
+    color: var(--donegal-green);
     font-weight: 700;
     padding: 2em 1em 2em;
 }
 
 nav a:hover,
 nav a:focus {
-    color: var(--light-blue);
+    color: var(--dark-orange);
 }
 
 .current-page {
@@ -302,6 +301,21 @@ nav a:focus {
 
 .current-page:hover {
     color: var(--grey);
+}
+
+@media (min-width: 675px){
+  .container-flex {
+    flex-direction: row;
+  }
+  main {
+    width: 66%;
+  }
+  aside{
+    width: 30%;
+    min-width: 220px;
+    margin-left: 1em;
+    font-size: 0.8em;
+  }
 }
 
 @media(max-width: 900px){
@@ -322,6 +336,7 @@ nav a:focus {
 
 
   header {
+    border-bottom: 1px solid var(--offwhite-blue);
     justify-content: flex-end;
     min-height: 100vh;
     width: 100%;
@@ -332,6 +347,7 @@ nav a:focus {
   .site-title, header nav {
     width: 100%;
     margin: 0;
+    padding: 0;
   }
 
 
@@ -384,20 +400,6 @@ nav a:focus {
       //margin: .5em 0;
       border-bottom: 1px solid grey;
   }
-
-
- 
-
-/*
-  main {
-    width: 66%;
-  }
-  aside{
-    width: 30%;
-    min-width: 220px;
-    margin-left: 1em;
-    font-size: 0.8em;
-  }m */
 }
 
 @media(max-width: 359px){
@@ -423,19 +425,19 @@ nav a:focus {
 }
 
 .sidebar-widget {
-  border: 1.5em solid var(--warm-light-grey);
+  border: 0.5em solid var(--donegal-green);
+  border-radius: 0.25em;
   padding: 0 1.75em;
   margin-bottom: 3em;
-
 }
 
 
 
 footer {
   margin-top: 2em;
-  background-color: rgba(4, 95, 199, 0.8);
+  background-color: var(--donegal-green);
   color: var(--white);
-  padding: 1.5em 0 2em;
+  padding: 1.5em 0 4em;
   text-align: center;
 }
 
