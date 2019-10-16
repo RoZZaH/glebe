@@ -13,6 +13,7 @@
     --donegal-green: rgb(12, 87, 9);
     --dark-orange: rgb(211, 69, 3);
     --orange: orange;
+    --offwhite-blue: rgb(232, 244, 247);
   }
 
   * {
@@ -27,6 +28,7 @@
       font-size: 1.125rem;
       font-weight: 300; /* light font-weight */
       color: var(--grey);
+      background: var(--offwhite-blue);
   
   }
   
@@ -113,7 +115,8 @@
     padding: 0.25em;
     padding-right: 1em;
     background: rgba(255, 255, 255, 0.7);
-    //background-blend-mode: overlay;
+    /* background-blend-mode: overlay; */
+    border-radius: 3px;
   }
 
   .subtitle a{
@@ -151,7 +154,7 @@ Layout
 }
 
 header {
-  border: 1px solid red;
+ // border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -267,16 +270,20 @@ nav ul {
 
     text-align: center;
     //border: 1px solid red;
+    border-bottom: 2px solid var(--offwhite-blue);
 }
 
 nav li {
-    background: white;
+    background: var(--offwhite-blue);
     //margin-left: 2em;
     flex: 1;
     border-left: 1px solid grey;
+    /* https://css-tricks.com/notched-boxes/ || bennettfeely.com/clippy/ */
+    clip-path: polygon(0 0, 90% 0%, 100% 18%, 100% 100%, 0 100%);
 }
 
 nav a {
+  z-index: 1;
     display: inline-block;
     text-decoration: none;
     color: var(--grey);
@@ -373,9 +380,14 @@ nav a:focus {
   }
 
   nav li {
+    clip-path: none;
       //margin: .5em 0;
       border-bottom: 1px solid grey;
   }
+
+
+ 
+
 /*
   main {
     width: 66%;
@@ -419,7 +431,13 @@ nav a:focus {
 
 
 
-
+footer {
+  margin-top: 2em;
+  background-color: rgba(4, 95, 199, 0.8);
+  color: var(--white);
+  padding: 1.5em 0 2em;
+  text-align: center;
+}
 
 
 
