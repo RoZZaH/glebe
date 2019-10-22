@@ -1,8 +1,7 @@
 ---
 layout: "base.njk"
 ---
-<main>
-
+##test2
 We are busy putting together an exciting programme for 2019! Check back here for more information during the summer.
 RTÉ Radio 1 DAVIS NOW LECTURES 2019
 2pm, Saturday 21st July 2019
@@ -103,4 +102,7 @@ On the tenth anniversary of the death of Derek Hill the Office of Public Works e
 Some highlights from the exhibition are presented here. All images are copyrighted to the Office of Public Works, and all originals are in the Derek Hill Collection at Glebe House and Gallery.
 
 You can download a a low-resolution PDF of the exhibition catalogue here.
-</main>
+
+<aside>
+an aside
+</aside>
