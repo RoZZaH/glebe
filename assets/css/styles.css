@@ -487,6 +487,15 @@ footer {
 
 .otimes:first-child{
   margin-right: 1em;
+  //padding: 1em;
+  border-width: 3px;
+  border-style: solid;
+  border-image: 
+    linear-gradient(
+      to bottom, 
+      var(--donegal-green), 
+      rgba(0, 0, 0, 0)
+    ) 78 100%;
 }
 
 .otimes {
