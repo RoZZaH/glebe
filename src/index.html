@@ -8,7 +8,7 @@ layout: "layouts/home.njk"
        
     <p>
     <figure class="float-right">
-        <img src="{{ /assets/img/x091125-Glebe-House-Gallery-011.jpg | url }}">
+        <img src="{{ '/assets/img/x091125-Glebe-House-Gallery-011.jpg' | url }}">
     <caption>Glebe house from the lake</caption>
     </figure>
     Glebe House, the home for nearly thirty years of the renowned artist Derek Hill, is situated on rising ground, beside Lough Gartan, east of Glenveagh National Park, Co. Donegal.</p>
@@ -21,42 +21,64 @@ layout: "layouts/home.njk"
     <h2>Opening Times and Tours</h2>
        
     <div class="container-flex opening-section">
-    <!--    <div class="otimes opening-times-1">
-            <figure style="border: 1px dashed pink;">
-                <img src="/assets/img/x091125-Glebe-House-Gallery-011.jpg">
-                <caption>Glebe house from the lake</caption>
-            </figure>
-        </div> -->
-        <div class="otimes">
-        <dl>
-            <dt>Glebe House <small>(only accessed by guided tour) </small></dt>
-                <dd>25th May to 3rd November 2019 (inclusive).</dd>
-                <dd>25th May to 30th September</dd>
-                <dd>11:00 to 18:30 (last admission 17:30).</dd>
-                <dd>1st October to 3rd November</dd>
-                <dd>11:00 to 17:30 (last admission 16:30).</dd>
-                <dd>In June, September, and October the House is closed on Fridays.</dd>
-        </dl>
-        <p>Ticket prices for the Glebe House tour are:</p>
-         <ul>
-            <li>€5 (adult)</li>
-            <li>€4 (senior/ group rate)</li>
-            <li>€3 (child/ student)</li>
-            <li>€13 (family)</li>
-        </ul>
+        <div class="otimes ot-1">
+            <dl>
+                <dt>Glebe House <small>(only accessed by guided tour) </small></dt>
+                    <dd>25th May to 3rd November 2019 (inclusive).</dd>
+                    <dd>25th May to 30th September</dd>
+                    <dd>11:00 to 18:30 (last admission 17:30).</dd>
+                    <dd>1st October to 3rd November</dd>
+                    <dd>11:00 to 17:30 (last admission 16:30).</dd>
+                    <dd>Please note: In June, September, and October the House is closed on Fridays.</dd>
+            </dl>
         </div>
-        <div class="otimes">
+        <div class="otimes ot-2">
         <dl>
             <dt>Glebe Gallery</dt>        
                 <dd>The Gallery is open for Easter, from the 20th of April until the 28th of April 2019.</dd>
                 <dd>The Gallery opens for the summer season on 25th of May until 4th of November 2019.</dd>
                 <dd>11:00 to 18:30. (Early closing from 1st October – 17:30).</dd>
-                <dd>In June, September, and October the Gallery is closed on Fridays.</dd>
+                <dd>Please note: In June, September, and October the Gallery is closed on Fridays.</dd>
             </dl>
-            <p class="float-right">Admission to the gallery is free.</p>
+        </div>
+        <div class="otimes">
+            <p>Ticket prices for the Glebe House tour are:</p>
+            <ul class="dashed">
+                <li><span class="ticket-price">€5</span> (adult)</li>
+                <li><span class="ticket-price">€4</span> (senior / group rate)</li>
+                <li><span class="ticket-price">€3</span> (child / student)</li>
+                <li><span class="ticket-price">€13</span> (family)</li>
+            </ul>
+            <p><b>Free Admission with a <a href="http://www.heritageireland.ie/en/info/heritagecards/"><span>Hertiage Card</span></a></b></p>
+            <p>Annual Hertiage Card costs:</p>
+            <ul class="dashed">
+                <li><span class="ticket-price">€40</span> (adult)</li>
+                <li><span class="ticket-price">€30</span> (senior / 60+)</li>
+                <li><span class="ticket-price">€10</span> (student / child)</li>
+                <li><span class="ticket-price">€90</span> (family)</li>
+            </ul>
+        </div>
+        <div class="otimes">
+        <p class="float-right"><small>Admission to the gallery is free.</small></p>
+            <img src="{{ '/assets/img/hertiage-card.jpg' | url }}">
         </div>
     </div>
     <hr class="divider">
+    <h2>School & Group Tours</h2>
+    <p><b>Advance booking for groups of more than <span style="color: var(--dark-orange);">8</span> people is required.</b></p>
+    <div class="container-flex bookings-section">
+        <div class="otimes">
+            <h3>School Bookings</h3>
+            <p>School visits are offered free of charge, however, advance booking is required. To arrange a school visit or to enquire about our workshops and other educational sessions, please use our <a href="#">contact form</a></p>
+            <p>Find out more about <a href="#">our education programme</a> or see our <a href="#">education resource packs</a>.</p>
+        </div>
+        <div class="otimes">
+            <h3>General Group Bookings</h3>
+            <p>Please contact us via the <a href="#">contact form</a> to enquire about group rates or to make a booking.</p>
+            <p>We offer special rates to tour operators for pre-booked tours (both guided and self-guided) for groups.</p>
+        </div>
+    </div>
+
 {% endblock %}
 
         <!-- widget - o[pening times , ticket prices 
