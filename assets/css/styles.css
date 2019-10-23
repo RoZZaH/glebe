@@ -488,14 +488,35 @@ footer {
 .otimes:first-child{
   margin-right: 1em;
   //padding: 1em;
-  border-width: 3px;
-  border-style: solid;
-  border-image: 
+  border-width: 0;
+  border-right: 2px solid;
+  /* The property has three parts:
+  The image to use as the border
+  Where to slice the image
+  Define whether the middle sections should be repeated or stretched(100%) 
+  
     linear-gradient(
       to bottom, 
-      var(--donegal-green), 
-      rgba(0, 0, 0, 0)
-    ) 78 100%;
+    //  rgba(255,255,255,0) 0%,
+    //  rgba(255,255,255,0) 25%,
+    //  rgba(12, 87, 9, 1) 30%, donegal-green + alpha
+      rgba(12, 87, 9, 1) 70%,
+      rgba(255,255,255,0) 75%,
+      //rgba(255,255,255,0) 100%
+      )
+     0 100%;
+  
+  */
+  border-image: 
+    linear-gradient(
+      to bottom,
+      rgba(255,255,255,0) 19.9%,
+      rgba(12, 87, 9, 1) 20%, /* donegal-green + alpha */
+      rgba(12, 87, 9, 1) 70%,
+      rgba(255,255,255,0) 80%,
+      rgba(255,255,255,0) 100%
+      )
+     0 100%;
 }
 
 .otimes {
