@@ -42,17 +42,15 @@
                      <li class="chamfered-right"><a href="{{ '/gardens-and-tearooms/' | url }}">The Gardens &amp;&nbsp;Tea&#8209;Rooms</a></li></ul></nav>
             </header>
 <div class="container">
-     <div class="container container-flex">
         {% block main %}
         {{ content | safe }}
         {% endblock %}
         
+        {% if aside %}
         {% block aside %}
         {{ content | safe }}
         {% endblock %}
-      <!--/.container -->
-      </div>
-
+        {% endif %}
     <!-- /.container (site-wrapper) -->
  </div>  
      <footer>
