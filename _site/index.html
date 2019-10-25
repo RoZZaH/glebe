@@ -110,7 +110,7 @@
     <hr class="divider">
     <h2>School & Group Tours</h2>
     <p><b>Advance booking for groups of more than <span style="color: var(--dark-orange);">8</span> people is required.</b></p>
-    <div class="container-flex bookings-section">
+    <div class="container-flex booking-section">
         <div class="otimes">
             <h3>School Bookings</h3>
             <p>School visits are offered free of charge, however, advance booking is required. To arrange a school visit or to enquire about our workshops and other educational sessions, please use our <a href="#">contact form</a></p>
@@ -121,6 +121,121 @@
             <p>Please contact us via the <a href="#">contact form</a> to enquire about group rates or to make a booking.</p>
             <p>We offer special rates to tour operators for pre-booked tours (both guided and self-guided) for groups.</p>
         </div>
+    </div>
+    <hr class="divider">
+    <div class="container-flex booking-form">
+        <form action"#" method="POST">
+        <p>Booking Enquiry</p>
+        <div class="form-block-1">
+            <div class="half-col">
+                <label for="fname">First Name:</label>
+                    <input id="fname" type="text" placeholder="First Name" required="required">
+            </div>
+            <div class="half-col">
+                <label for="surname">Surname:</label>
+                    <input id="surname" type="text" placeholder="Surname" required="required">
+            </div>
+            <div class="half-col">
+                <label for="email">Email:</label>
+                    <input id="email" type="email" placeholder="Email" required="required">
+            </div>
+            <div class="half-col col-mobile">
+                <label for="mobile">Contact Number (Mobile):</label>
+                    <input id="mobile" type="text" placeholder="+353" required="required">
+            </div>
+        </div>
+        <div class="form-block-2">
+<style>
+/* testing conditional visibility */
+/* ref https://codepen.io/memco/pen/BajpD */
+#edu:checked ~ .conditional1 {
+				clip: auto;
+				height: auto;
+				margin: 0;
+				overflow: visible;
+				position: static;
+				width: auto;
+			}
+
+#edu:not(:checked) ~ .conditional1
+{
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+#tour:checked ~ .conditional2 {
+				clip: auto;
+				height: auto;
+				margin: 0;
+				overflow: visible;
+				position: static;
+				width: auto;
+			}
+
+#tour:not(:checked) ~ .conditional2
+{
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+
+</style>
+            <div>
+                <label for="tour-type">Tour Type:</label>
+                    <input id="edu"  name="tour-type" type="radio" checked="checked" value="Educational">Educational 
+                    <input id="tour" name="tour-type" type="radio" value="Tourist Tour">Tourist
+                <fieldset class="conditional1">
+                    <label for="ed-level" class="label-full-width">Education Level:</label>
+                        <input id="primary" value="primary" type="radio" name="ed-level">Primary 
+                        <input id="secondary" value="secondary" type="radio" name="ed-level" checked="checked">Secondary 
+                        <input id="third-level" value="third-level" type="radio" name="ed-level">Third-Level<br>
+                    <label for="school">Name of School/Instution:</label>
+                        <input id="school" type="text" placeholder="School, Town">
+                </fieldset>
+                <fieldset class="conditional2">
+                        <label for="tour-operator">Tour Operator:</label>
+                            <input id="tour-operator" type="text" placeholder="Tour Company" required="required">
+                </fieldset>
+            </div>
+
+        </div>
+        <div class="form-block-3">
+            <div>
+                <label for="tour-size">Number of People on Tour (including guides):</label>
+                <select id="tour-size">
+                    <option value="0-10">0 &mdash; 10</option>
+                    <option value="10+">10+ people</option>
+                    <option value="20+">20+ people</option>
+                    <option value="10+" selected="selected">25+ people</option>
+                </select>
+            </div>
+            <div>
+                <label for="date-of-visit">(Intended) Date of Visit:</label>  
+                <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date NB: Not supported by Safari/IE11 -->
+                <input type="date" id="date-of-visit" name="date-of-visit" value="2019-11-10" min="2019-01-01" max="2021-12-31">
+            </div>
+        </div>
+        <div class="form-block-4">
+         <div>
+            <label for="notes" class="label-full-width">Notes / Comments:*</label>
+            <textarea id="notes" rows="5" style="width: 100%;">Any notes or requirements...  Anything specific you would like covered by the tour..
+            </textarea>
+            <p>NB: consent forms will be sent as part of the Tour Pack</p>
+            <button type="submit">Send &nbsp;<i class="fas fa-paper-plane">&nbsp; </i></button>
+        </div>
+        </div>
+        <p>Enquiries generally take 2 days to process,<br>if you require a response more urgently please contact us directly on <a href="tel:+353749137071"><i class="fas fa-info-circle"></i> +353 74 913&nbsp;7071</a></p>
+      </form>
     </div>
 
 
