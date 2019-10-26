@@ -1,46 +1,32 @@
 ---
-layout: "base.njk"
+layout: "layouts/events.njk"
 ---
-##test2
-We are busy putting together an exciting programme for 2019! Check back here for more information during the summer.
-RTÉ Radio 1 DAVIS NOW LECTURES 2019
-2pm, Saturday 21st July 2019
-“Irish Theatre Performance and the evolving presence of home in Irish theatre.“
-
-Róise Goan, Artsadmin London Artistic Director from August 2019.
-
-Contributing guests include Emer McGowan, Director Draiocht, Blanchardstown.
-
-To get your FREE tickets: www.eventbrite.com
-
-About the series
-
-The RTÉ Radio 1 DAVIS NOW LECTURES 2019 present aspects of MAKING HOME by contributors renowned in their fields of ARCHITECTURE, HISTORY, TECHNOLOGY, ARTS and ECONOMICS.
-
-At the heart of the DAVIS NOW LECTURES is the aim of bringing to audiences newly-commissioned lectures from our finest scholars, artists and thinkers. Five lectures are recorded on location around Ireland for future broadcast as hour-long edited programmes. Each event consists of a lecture, questions and remarks by an invited audience and then a public q+a session.
-
-The series consultant editor is architectural historian Dr Ellen Rowley, of University College Dublin. The DAVIS NOW LECTURES 2019 series is supported by the Broadcasting Authority of Ireland and its academic partner is University College Dublin. The RTÉ Radio series producer is Clíodhna Ní Anluain.
-
-https://www.rte.ie/radio1/davis-now-lectures/
-
- 
+{% markdown %}
+## test2
 
 
-THIS EVENT IS NOW SOLD OUT
-Olivia O’Leary presents The Heart of Summer
-Wednesday 11th July, 8pm
-Enjoy a feast of music and poetry introduced by Olivia O’Leary, acclaimed journalist and presenter of the RTÉ Poetry Programme. Produced by Poetry Ireland in partnership with the OPW.
+### test RTE
+{% endmarkdown %}
 
-Olivia O’Leary is joined by Donegal poets Moya Cannon and Annemarie Ní Churreáin, as well as singer-songwriter Kevin Doherty in Glebe House and Gallery.
+{% for event in collections.events %}
 
-Tickets €8 – €10
+<article class="article-recent">
+    <div class="article-recent-main">
+        <h2 class="article-title">{{ event.data.title }}</h2>
+        <p>{{ event.data.description }}</p>
+        <p class="article-body">{{ event.templateContent | safe }}</p>
+       <!-- <a href="#" class="article-read-more">continue reading</a> -->
+    </div>
+    <div class="article-recent-secondary">
+        <img src="{{ event.data.featuredImage | url }}" alt="Glebe Interior" class="article-image">
+        <p class="article-info">July 19, 2019  |  3 comments</p>
+    </div>
+</article>
+{% endfor %}
 
-For more information please click here.
+<!-- 
 
 
-Annual Easter Open Art Competition
-26th March – 3rd April, 2016
-The annual Easter Exhibition showing works by many artists from the North West of Ireland will run from Saturday 26th March until Sunday 2nd April 2016. The opening will be held on the evening of Friday 25th March at 7pm.
 
 
 Trinity’s ‘College Gallery’: The Swing of the Sixties
@@ -106,3 +92,5 @@ You can download a a low-resolution PDF of the exhibition catalogue here.
 <aside>
 an aside
 </aside>
+
+-->
