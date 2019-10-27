@@ -1,12 +1,36 @@
 ---
-layout: "layouts/gallery.njk"
+layout: "layouts/collection.njk"
 ---
+{% markdown %}
 
-A Personal Art Collection
+## A Personal Art Collection
+
 Glebe House and Gallery is home to a large collection of art brought together by Derek Hill. There are over 1,500 items in the whole collection. If you wish to consult any item in particular, please contact us. The collection highlights chosen here represent various aspects of the multi-faceted life of Derek Hill and his contemporaries. Important artists of the twentieth century appear throughout Glebe, and each of their works here is tied to Hill’s life in a personal way.
 
-Click on a thumbnail to see a larger image.
+[//]: # (Click on a thumbnail to see a larger image.)
 
+{% endmarkdown %}
+
+{% for item in collections.theCollection %}
+
+<article class="article-recent">
+    <div class="article-recent-main">
+        <h2 class="article-title">{{ item.data.title }}</h2>
+        <p>{{ item.data.artist }}</p>
+        <p class="article-body">{{ item.templateContent | safe }}</p>
+       <!-- <a href="#" class="article-read-more">continue reading</a> -->
+    </div>
+    <div class="article-recent-secondary">
+        <img src="{{ item.data.featuredImage | url }}" alt="Glebe Interior" class="article-image">
+        <p class="article-info">July 19, 2019  |  3 comments</p>
+    </div>
+</article>
+{% endfor %}
+
+
+
+
+<!--
 ## The Collection
 
 
@@ -110,4 +134,4 @@ Oil on canvas.
 
 Bratby was born in England in 1928 and studied at the Royal College of Art, London. There he won in 1954 a scholarship to Rome where he met Derek Hill, and painted this picture of his wife ill in bed (Bratby was married to the acclaimed painter Jean Cooke). It is typical of a series of ‘tabletop’ paintings he did at that time which were carefully composed using everyday kitchen articles. The subject is as much the paraphernalia of bed-sit existence as his wife’s illness, which is nevertheless reflected in the fevered and garish colours.
 
-
+-->
