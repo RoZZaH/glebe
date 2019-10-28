@@ -46,12 +46,6 @@
         {{ content | safe }}
         {% endblock %}
         
-        {% if aside %}
-        {% block aside %}
-        {{ content | safe }}
-        {% endblock %}
-        {% endif %}
-
         {% block postContent %}{% endblock %}
     <!-- /.container (site-wrapper) -->
  </div>  

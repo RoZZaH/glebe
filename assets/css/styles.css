@@ -352,13 +352,7 @@ nav a:focus {
     flex-direction: row;
   }
   main {
-    width: 66%;
-  }
-  aside{
-    width: 30%;
-    min-width: 220px;
-    margin-left: 1em;
-    font-size: 0.8em;
+    width: auto; /* prev 66% with aside */
   }
   figure{
     width: 30%;
