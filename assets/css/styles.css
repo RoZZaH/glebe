@@ -21,7 +21,7 @@
   }
   
   
-  body {
+body {
       margin: 0;
       padding: 0;
       font-family: 'Ubuntu', sans-serif;
@@ -31,22 +31,24 @@
       background: var(--offwhite-blue);
   }
   
-  figure, img {
-    max-width: 100%;
-    display: block;
+figure, img {
+  max-width: 100%;
+  display: block;
   }
   
-  figure {
+figure {
     margin: 0;
   }
 
+/* debug style */
+  .red {border: 1px solid red;}
 
-  /* =================
+/* =================
   Typography
   ================= */
   
   
-  h1 {
+h1 {
     color: #fff;
     font-family: 'Lora', serif;
     font-size: 2rem;
@@ -54,12 +56,12 @@
     margin-left: 1rem;
   }
 
-  .home h1 {
+ .home h1 {
       font-size: 36px;
   }
 
 
-  h1 a {
+h1 a {
     color: inherit;
     text-decoration: none;
   }
@@ -332,44 +334,151 @@ nav a:focus {
   //text-align: center;
 }
 
-.float-right {
-  margin-top: 0 0 3em 2em; 
-  float: right;
-  border: 1px dotted red;
+.section-card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
 }
 
-.float-left {
-  margin: 0 2em 3em 0;
-  float: left;
+.section-card-img {
+  object-fit: cover;
+  flex-basis: 33%;
+  min-height: 0;
+  min-width: 0;
 }
 
-.inline-float {
-  display: inline-block;
-}
 
 @media (min-width: 675px){
   .container-flex {
     flex-direction: row;
   }
   main {
-    width: 66%;
+    width: auto; /* prev 66% with aside */
   }
-  aside{
-    width: 30%;
-    min-width: 220px;
-    margin-left: 1em;
-    font-size: 0.8em;
-  }
+  /*
   figure{
     width: 30%;
     min-width: 220px;
     margin-left: 1em;
     font-size: 0.8em;
   }
+*/
+  .two-col {
+    display: flex;
+    flex-basis: 48%;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .two-col figure {
+    width: 100%;
+    border: 1px blue dotted;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .two-col figure img {
+    object-fit: cover;
+    flex-basis: 350px;
+    min-height: 0;
+    min-width: 0;
+  }
 
   .half-col {
     width: auto;
   }
+
+  .section-card {
+    flex-direction: row;
+    //align-items: stretch;
+  }
+  .section-card-img {
+    height: 350px;
+  }
+  
+  .section-card-content {
+    flex-basis: 70%;
+    padding-left: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid red;
+  }
+
+  .section-card-content h3 {
+    margin-bottom: 0;
+  }
+  .section-card-content p {
+    border:1px blue dotted;
+  }
+
+     
+  .group > p {
+    margin-top: 0;
+  }
+
+  .group:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+
+
+  .float-text-left > h3,
+  .float-text-left p {
+    width: 65%;
+  }
+
+  .float-text-left img,
+  .float-text-left figure {
+    width: 33%;
+    float: right;
+    clear: right;
+  }
+
+  .float-text-left figure img {
+    width: 100%;
+    display: block;
+  }
+
+  .float-text-left figcaption {
+    clear: both;
+    font-size: 0.8rem;
+  }
+
+
+  .float-text-right figure {
+    position: relative;
+    float: left;
+  }
+
+  .float-text-right img,
+  .float-text-right figure {
+    width: 50%;
+    float: left;
+  }
+
+  .float-text-right figure img {
+    width: 100%;
+  }
+
+  .float-text-right figcaption {
+    font-size: 0.8rem;
+    padding: 0.5em 0.8em;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, .6);
+    color: white;
+    float: left;
+  }
+
+  .float-text-right > p {
+    width: 48%;
+    float: right;
+  }
+
 }
 
 
