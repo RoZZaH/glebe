@@ -912,6 +912,12 @@ button:focus {
   }
 }
 
+@media(max-width: 780px){
+  .collection-card{
+    flex-basis: 0 1 48%;
+  }
+}
+
 @media(min-width: 600px){
   .form-block-3 label {
     margin-right: 1em;
