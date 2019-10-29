@@ -80,32 +80,83 @@ layout: "layouts/home.njk"
         </div>
     </div>
     <hr class="divider">
-    <div class="container-flex booking-form">
+    <div class="container-flex">
+    <!-- based partially on https://webdesign.tutsplus.com/tutorials/building-responsive-forms-with-flexbox--cms-26767 -->
         <form action"#" method="POST">
-        <p>Booking Enquiry</p>
-        <div class="form-block-1">
-            <div class="half-col">
+        <p class="ctr form-heading"><strong>Booking Enquiry</strong></p>
+        <hr class="divider divider--form">
+        <ul class="flex-form-outter">
+            <li>
                 <label for="fname">First Name:</label>
                     <input id="fname" type="text" placeholder="First Name" required="required">
-            </div>
-            <div class="half-col">
+            </li>
+            <li>
                 <label for="surname">Surname:</label>
                     <input id="surname" type="text" placeholder="Surname" required="required">
-            </div>
-            <div class="half-col">
+            </li>
+            <li>
                 <label for="email">Email:</label>
                     <input id="email" type="email" placeholder="Email" required="required">
-            </div>
-            <div class="half-col col-mobile">
+            </li>
+            <li class="col-mobile">
                 <label for="mobile">Contact Number (Mobile):</label>
                     <input id="mobile" type="text" placeholder="+353" required="required">
-            </div>
-        </div>
-        <div class="form-block-2">
+            </li>
+            <li>
+                <p>Tour Type:</p>
+                  <ul class="flex-form-inner">
+                    <li><input id="edu"  name="tour-type" type="radio" checked="checked" value="Educational"><label for="edu">Educational</label></li>
+                    <li><input id="tour" name="tour-type" type="radio" value="Tourist Tour"><label for="tourist">Tourist</label></li>
+                  </ul>
+            </li>
+            <li id="conditional1">
+                  <p>Education Level:</p>
+                  <ul class="flex-form-inner">
+                        <li><input id="primary" value="primary" type="radio" name="ed-level">Primary</li>
+                        <li><input id="secondary" value="secondary" type="radio" name="ed-level" checked="checked">Secondary</li>
+                        <li><input id="third-level" value="third-level" type="radio" name="ed-level">Third-Level</li>
+                  </ul>
+            </li>
+            <li>
+                <label for="school">Name of School / Institution:</label>
+                    <input id="school" type="text" placeholder="School, Town">
+            </li>    
+            <li id="conditional2">
+                <label for="tour-operator">Tour Operator:</label>
+                    <input id="tour-operator" type="text" placeholder="Tour Company" required="required">
+            </li>
+            <li>
+                <label for="tour-size">Number of People on&nbsp;Tour<br><span class="lc">(including guides)</span>:</label>
+                    <select id="tour-size">
+                        <option value="0-10">0 &mdash; 10</option>
+                        <option value="10+">10+ people</option>
+                        <option value="20+">20+ people</option>
+                        <option value="10+" selected="selected">25+ people</option>
+                    </select>
+            </li>
+            <li>
+                <label for="date-of-visit"><span class="tc">(Intended)</span><br>Date of Visit:</label>  
+                    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date NB: Not supported by Safari/IE11 -->
+                    <input type="date" id="date-of-visit" name="date-of-visit" value="2019-11-10" min="2019-01-01" max="2021-12-31">
+            </li>
+            <li>
+                <label for="notes" class="label-full-width">Notes / Comments:*</label>
+                    <textarea id="notes" rows="5" style="width: 100%;">Any notes or requirements...  Anything specific you would like covered by the tour.. </textarea>
+                
+            </li>
+            <li>
+                <button type="submit">Send &nbsp;<i class="fas fa-paper-plane">&nbsp; </i></button>
+            </li>
+        </ul>
+        <p>* Consent forms will be sent as part of the Tour Pack</p>
+        <hr class="divider divider--form">
+        <p class="ctr">Enquiries generally take 2 days to process,<br>if you require a response more urgently please contact us directly<br>on <a href="tel:+353749137071"><i class="fas fa-info-circle"></i> +353 74 913&nbsp;7071</a></p>
+      </form>
+    </div>
 <style>
 /* testing conditional visibility */
 /* ref https://codepen.io/memco/pen/BajpD */
-#edu:checked ~ .conditional1 {
+#edu:checked ~ li#conditional1 {
 				clip: auto;
 				height: auto;
 				margin: 0;
@@ -114,7 +165,7 @@ layout: "layouts/home.njk"
 				width: auto;
 			}
 
-#edu:not(:checked) ~ .conditional1
+#edu:not(:checked) ~ li#conditional1
 {
 				border: 0;
 				clip: rect(0 0 0 0);
@@ -125,7 +176,7 @@ layout: "layouts/home.njk"
 				position: absolute;
 				width: 1px;
 			}
-#tour:checked ~ .conditional2 {
+#tour:checked ~ li#conditional2 {
 				clip: auto;
 				height: auto;
 				margin: 0;
@@ -134,7 +185,7 @@ layout: "layouts/home.njk"
 				width: auto;
 			}
 
-#tour:not(:checked) ~ .conditional2
+#tour:not(:checked) ~ li#conditional2
 {
 				border: 0;
 				clip: rect(0 0 0 0);
@@ -147,54 +198,6 @@ layout: "layouts/home.njk"
 			}
 
 </style>
-            <div>
-                <label for="tour-type">Tour Type:</label>
-                    <input id="edu"  name="tour-type" type="radio" checked="checked" value="Educational">Educational 
-                    <input id="tour" name="tour-type" type="radio" value="Tourist Tour">Tourist
-                <fieldset class="conditional1">
-                    <label for="ed-level" class="label-full-width">Education Level:</label>
-                        <input id="primary" value="primary" type="radio" name="ed-level">Primary 
-                        <input id="secondary" value="secondary" type="radio" name="ed-level" checked="checked">Secondary 
-                        <input id="third-level" value="third-level" type="radio" name="ed-level">Third-Level<br>
-                    <label for="school">Name of School/Instution:</label>
-                        <input id="school" type="text" placeholder="School, Town">
-                </fieldset>
-                <fieldset class="conditional2">
-                        <label for="tour-operator">Tour Operator:</label>
-                            <input id="tour-operator" type="text" placeholder="Tour Company" required="required">
-                </fieldset>
-            </div>
-
-        </div>
-        <div class="form-block-3">
-            <div>
-                <label for="tour-size">Number of People on Tour (including guides):</label>
-                <select id="tour-size">
-                    <option value="0-10">0 &mdash; 10</option>
-                    <option value="10+">10+ people</option>
-                    <option value="20+">20+ people</option>
-                    <option value="10+" selected="selected">25+ people</option>
-                </select>
-            </div>
-            <div>
-                <label for="date-of-visit">(Intended) Date of Visit:</label>  
-                <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date NB: Not supported by Safari/IE11 -->
-                <input type="date" id="date-of-visit" name="date-of-visit" value="2019-11-10" min="2019-01-01" max="2021-12-31">
-            </div>
-        </div>
-        <div class="form-block-4">
-         <div>
-            <label for="notes" class="label-full-width">Notes / Comments:*</label>
-            <textarea id="notes" rows="5" style="width: 100%;">Any notes or requirements...  Anything specific you would like covered by the tour..
-            </textarea>
-            <p>NB: consent forms will be sent as part of the Tour Pack</p>
-            <button type="submit">Send &nbsp;<i class="fas fa-paper-plane">&nbsp; </i></button>
-        </div>
-        </div>
-        <p>Enquiries generally take 2 days to process,<br>if you require a response more urgently please contact us directly on <a href="tel:+353749137071"><i class="fas fa-info-circle"></i> +353 74 913&nbsp;7071</a></p>
-      </form>
-    </div>
-
 {% endblock %}
 
         <!-- widget - o[pening times , ticket prices 

@@ -117,6 +117,18 @@ h1 a {
     font-weight: 700;
   }
 
+  .tc {
+    text-transform: capitalize;
+  }
+
+  .lc {
+    text-transform: lowercase;
+  }
+
+  .ctr {
+    text-align: center;
+  }
+
   /* type modifiers */
   .site-title {
     text-align: left;
@@ -312,6 +324,10 @@ nav a:focus {
   margin: 2em auto;
 }
 
+.divider--form {
+  background-color: brown;
+}
+
 /* =================
   Cards
 ================= */
@@ -330,16 +346,14 @@ nav a:focus {
 }
 
 .cards-collection {
-  position: relative;
-  z-index: 1;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  max-height: 2900px;
-  width: 100%;
-  justify-content: flex-start;
+  max-height: 3500px;
+  justify-content: space-between;
   align-items: center;
   align-content: space-around; /* gutters */
+  min-width: 100%;
 }
 
 
@@ -351,14 +365,13 @@ nav a:focus {
 }
 
 .card-collection {
-  //margin: 0px 10px 15px 0px;
   margin-bottom: 0.75em;
   background: rgba(177, 171, 106, 0.25);
   border-radius: 5px;
-  //flex-basis: 200px;
-  max-width: 209px;
-  //border: 1px solid blue;
-
+  min-width: 120px;
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 270px;
 }
 
 .card-collection:first-child{
@@ -689,24 +702,71 @@ Contact Form
   background: MistyRose;
   padding: 2em;
   border-radius: 10px;
+  width: 720px;
+  margin: 0;
 }
+
+.flex-form-outter {
+  max-width: 100%;
+  margin-bottom: 0em auto 1.5em;
+}
+
+.flex-form-outter,
+.flex-form-inner {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.flex-form-outter li,
+.flex-form-inner {
+  margin-top: 0.5em;
+  margin-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.flex-form-inner {
+  padding: 0 8px;
+  justify-content: space-between;  
+}
+
+p.form-heading,
+.flex-form-outter li p,
+.flex-form-outter > li > label {
+  padding: 0px 8px;
+  font-weight: 300;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.flex-form-outter > li > label,
+.flex-form-outter li p {
+  flex: 1 0 16ch;
+  max-width: 250px;
+}
+
+.flex-form-outter > li > label + *,
+.flex-form-inner {
+  flex: 1 0 250px;
+}
+
+.flex-form-outter li p {
+  margin: 0;
+}
+
 
 label:after {
   content: " ";
 }
 
-label {
-//  display: block;
-  border:1px dotted red;
-  width: 12ch;
-}
 
 input[type="text"],
 input[type="email"],
 input[type="date"],
 textarea, 
 select {
-  margin-bottom: 1em;
   padding: .25em 0.5em;
   border: 1px solid brown;
   background: var(--offwhite-blue);
@@ -725,6 +785,7 @@ button {
   border-radius: 3px;
   transform: scale(1);
 }
+
 
 input:focus,
 select:focus,
@@ -764,6 +825,9 @@ button {
               background 500ms ease-in-out,
               transform 200ms ease-in-out;              ;
   // transform: scale(1);
+  margin-top: 1.5em;
+  margin-left: auto;
+  //align-self: flex-end;
 }
 
 button:hover,
@@ -773,51 +837,9 @@ button:focus {
   transform: scale(1.05);
 }
 
-.form-block-1 {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-.half-col {
-  width: 100%;
-  border: 1px solid pink;
-  display: flex;
-  justify-content: flex-start;
-  align-items: baseline;
-}
-
-fieldset {
-  padding: 0;
-  border: none;
-}
-
-.col-mobile {
- // border: 1px solid black;
-  justify-content: space-between;
-}
 
 
-.label-full-width
-{
-  width: 100%;
-  display: block;
-}
 
-.col-mobile,
-.form-block-3 div {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  border: 1px dashed black;
-  flex-grow: 1;
-}
-
-.form-block-3 label {
-  width: auto;
-}
 
 
 .article-recent {
