@@ -883,6 +883,9 @@ button:focus {
     flex: 0 1 48%;
   }
 
+  .ot-3, .ot-4, .opening-section + hr {
+    position: initial;
+  }
 
 
 }
