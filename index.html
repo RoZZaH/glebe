@@ -85,8 +85,9 @@
                 <dd>11:00 to 18:30. (Early closing from 1st October – 17:30).</dd>
                 <dd>Please note: In June, September, and October the Gallery is closed on Fridays.</dd>
             </dl>
+            <p class="pull-up"><small>Admission to the gallery is free.</small></p>
         </div>
-        <div class="otimes">
+        <div class="otimes ot-3">
             <p>Ticket prices for the Glebe House tour are:</p>
             <ul class="dashed">
                 <li><span class="ticket-price">€5</span> (adult)</li>
@@ -103,9 +104,8 @@
                 <li><span class="ticket-price">€90</span> (family)</li>
             </ul>
         </div>
-        <div class="otimes">
-        <p class="float-right"><small>Admission to the gallery is free.</small></p>
-            <img src="/glebe/assets/img/hertiage-card.jpg">
+        <div class="otimes ot-4">
+            <img class="r5" src="/glebe/assets/img/hertiage-card.jpg">
         </div>
     </div>
     <hr class="divider">
@@ -123,12 +123,12 @@
             <p>We offer special rates to tour operators for pre-booked tours (both guided and self-guided) for groups.</p>
         </div>
     </div>
-    <hr class="divider">
+ <!--    <hr class="divider"> -->
     <div class="container-flex">
     <!-- based partially on https://webdesign.tutsplus.com/tutorials/building-responsive-forms-with-flexbox--cms-26767 -->
         <form action"#" method="POST">
         <p class="ctr form-heading"><strong>Booking Enquiry</strong></p>
-        <hr class="divider divider--form">
+    <!--    <hr class="divider divider--form"> -->
         <ul class="flex-form-outter">
             <li>
                 <label for="fname">First Name:</label>
@@ -143,12 +143,12 @@
                     <input id="email" type="email" placeholder="Email" required="required">
             </li>
             <li class="col-mobile">
-                <label for="mobile">Contact Number (Mobile):</label>
+                <label for="mobile">Contact Number <span class="tc">(Mobile)</span>:</label>
                     <input id="mobile" type="text" placeholder="+353" required="required">
             </li>
             <li>
                 <p>Tour Type:</p>
-                  <ul class="flex-form-inner">
+                  <ul class="flex-form-inner tour">
                     <li><input id="edu"  name="tour-type" type="radio" checked="checked" value="Educational"><label for="edu">Educational</label></li>
                     <li><input id="tour" name="tour-type" type="radio" value="Tourist Tour"><label for="tourist">Tourist</label></li>
                   </ul>
@@ -193,7 +193,7 @@
             </li>
         </ul>
         <p>* Consent forms will be sent as part of the Tour Pack</p>
-        <hr class="divider divider--form">
+        <!-- <hr class="divider divider--form"> -->
         <p class="ctr">Enquiries generally take 2 days to process,<br>if you require a response more urgently please contact us directly<br>on <a href="tel:+353749137071"><i class="fas fa-info-circle"></i> +353 74 913&nbsp;7071</a></p>
       </form>
     </div>
