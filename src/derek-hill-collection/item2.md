@@ -1,9 +1,8 @@
 ---
-layout: "layouts/collection.njk"
 title: "Romeo"
-artist: "Oliver Messel (1904-78)."
+artist: "Oliver Messel"
+years: "1904-78"
 medium: "Watercolour and pencil on paper"
-description: "26th March – 3rd April, 2016"
 featuredImage: "/assets/img/collection/091125-Glebe-House-Gallery-015.jpg"
 tags: "theCollection"
 ---

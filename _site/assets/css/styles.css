@@ -181,9 +181,6 @@ header {
   padding: 0;
 }
 
-
-
-
 .container {
     width: 96%;
     max-width: 900px;
@@ -213,26 +210,16 @@ header {
   color: var(--white);
 }
 
-
-
 .key-info a:link, .key-info a:visited  {
   color: var(--lightest-blue);
   text-decoration: none;
 }
-
-
 
 .key-info a:hover, .key-info a:focus  {
   color: var(--orange);
   text-decoration: none;
 }
 
-/*
-.key-info a span {
-  border-bottom: none;
-}
-
-*/
 
 a:link .under-dotted, a:visited .under-dotted {
   border-bottom: 1px dotted var(--lightest-blue);
@@ -248,9 +235,6 @@ a:hover .under-dotted, a:focus .under-dotted {
   padding: 0.2em;
 }
 
-.key-item {
-  //flex: 1;
-}
 
 .key-item ul {
   margin: 0;
@@ -268,10 +252,6 @@ a:hover .under-dotted, a:focus .under-dotted {
   padding: 0.2em;
 }
 
-
-.site-title {
-
-}
 
 .site-title, header nav {
   width: 90%;
@@ -291,7 +271,6 @@ nav ul {
 nav li {
     background: var(--offwhite-blue);
     flex: 1;
-    //border-left: 1px solid grey;
     /* https://css-tricks.com/notched-boxes/ || bennettfeely.com/clippy/ */
     clip-path: 
       polygon(
@@ -331,8 +310,11 @@ nav a:focus {
   height: 2px;
   border: 0;
   margin: 2em auto;
-  //text-align: center;
 }
+
+/* =================
+  Cards
+================= */
 
 .section-card {
   display: flex;
@@ -345,6 +327,89 @@ nav a:focus {
   flex-basis: 33%;
   min-height: 0;
   min-width: 0;
+}
+
+.cards-collection {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 2900px;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: space-around; /* gutters */
+}
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.card-collection {
+  //margin: 0px 10px 15px 0px;
+  margin-bottom: 0.75em;
+  background: rgba(177, 171, 106, 0.25);
+  border-radius: 5px;
+  //flex-basis: 200px;
+  max-width: 209px;
+  //border: 1px solid blue;
+
+}
+
+.card-collection:first-child{
+  margin-top: 2.5em;
+}
+
+.card-collection:nth-child(3n+2) {
+  margin-top: 0.55em;
+ }
+
+
+ .card-collection:nth-child(10n) {
+  margin-top: 2em;
+ }
+ 
+ .card-collection:nth-child(15n) {
+  margin-top: 4.75em;
+ }
+
+
+
+.card-collection-fig {
+  margin: 0;
+  padding: 0;
+}
+
+.card-collection-fig img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.card-collection-fig figcaption {
+  font-size: 1rem;
+  padding: 0.5em 0.75em;
+  margin: 0;
+}
+
+.card-collection-fig figcaption small {
+  display: inline-block;
+  margin: 0;
+}
+
+.card-collection-info{
+  margin: 0;
+  padding: 0;
+}
+
+.card-collection-info p {
+  margin: 0; /* strange behaviour margin top only puts margin on top and bottom - md was putting p tags*/
+  font-size: 0.85rem;
+  padding: 0 0.75em 1.25em;
 }
 
 
@@ -390,12 +455,10 @@ nav a:focus {
 
   .section-card {
     flex-direction: row;
-    //align-items: stretch;
   }
   .section-card-img {
     height: 350px;
   }
-  
   .section-card-content {
     flex-basis: 70%;
     padding-left: 1em;
@@ -411,7 +474,6 @@ nav a:focus {
   .section-card-content p {
     border:1px blue dotted;
   }
-
      
   .group > p {
     margin-top: 0;
@@ -481,15 +543,6 @@ nav a:focus {
 
 }
 
-
-
-
-.sidebar-widget {
-  border: 0.5em solid var(--donegal-green);
-  border-radius: 0.25em;
-  padding: 0 1.75em;
-  margin-bottom: 3em;
-}
 
 
 
@@ -587,9 +640,9 @@ ul.dashed > li:before {
   font-weight: 400;
 }
 
-
-/* navigation */
-
+/* =================
+Opening Times
+================= */
 dl {
 //  border: 1px solid blue;
   margin: 0;
@@ -628,6 +681,9 @@ dd:last-of-type {
    margin-top: 1.5em;
  }
 
+/* =================
+Contact Form
+================= */
 
  form {
   background: MistyRose;
@@ -962,3 +1018,15 @@ label[for="mobile"]{
   }
 
 }
+
+
+
+/*
+
+.sidebar-widget {
+  border: 0.5em solid var(--donegal-green);
+  border-radius: 0.25em;
+  padding: 0 1.75em;
+  margin-bottom: 3em;
+}
+*/

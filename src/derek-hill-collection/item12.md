@@ -1,0 +1,14 @@
+---
+title: "West End Village, Tory Island"
+artist: "James Dixon"
+years: "1897 - 1970"
+medium: "Oil on board"
+featuredImage: "/assets/img/collection/West-End-Village-by-James-Dixon.jpg"
+tags: "theCollection"
+---
+Soon after Derek Hill began painting on Tory Island, James Dixon, then in his sixties, watched him work and swore he could do better. This seagull’s view of the village and harbour was his response, and, like all of Dixon’s powerful and evocative scenes of Tory, was done entirely from memory.
+
+
+
+
+

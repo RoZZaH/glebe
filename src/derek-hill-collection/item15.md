@@ -1,0 +1,16 @@
+---
+title: "Dying Pheasant"
+artist: "Edwin Landseer"
+years: "1802 - 1873"
+medium: "Oil on panel"
+featuredImage: "/assets/img/collection/091125-Glebe-House-Gallery-040.jpg"
+tags: "theCollection"
+---
+Landseer’s paintings of deer in the Scottish Highlands, and of dogs and other animals, made him a favourite painter in the Victorian era, and of Queen Victoria herself. He was a precociously gifted artist, exhibiting at the Royal Academy by the age of sixteen, and was elected as an associate member at the earliest possible age, twenty four. By then he had a famous facility for painting textures such as fur and feathers. This picture was one of a pair painted in 1832; the other, of a ptarmigan belonged latterly to Henry McIlhenny and hung in Glenveagh Castle, from where he donated several large Landseers to the Philadelphia Museum of Art.
+
+
+
+
+
+
+

@@ -1,7 +1,7 @@
 ---
-layout: "layouts/collection.njk"
-title: "Evening Thames at Chiswick."
-artist: " Victor Pasmore (1918-1998)"
+title: "Evening Thames at Chiswick"
+artist: " Victor Pasmore"
+years: "1918-1998"
 medium: "Oil on Canvas"
 description: "26th March – 3rd April, 2016"
 featuredImage: "/assets/img/collection/091125-Glebe-House-Gallery-014.jpg"

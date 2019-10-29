@@ -1,0 +1,18 @@
+---
+title: "Jean in Bed with Jaundice"
+artist: "John Bratby"
+years: "1928 - 1992"
+medium: "Wood-block colour print"
+featuredImage: "/assets/img/collection/PC-79-Glebe-Gallery-004.jpg"
+tags: "theCollection"
+---
+Bratby was born in England in 1928 and studied at the Royal College of Art, London. There he won in 1954 a scholarship to Rome where he met Derek Hill, and painted this picture of his wife ill in bed (Bratby was married to the acclaimed painter Jean Cooke). It is typical of a series of ‘tabletop’ paintings he did at that time which were carefully composed using everyday kitchen articles. The subject is as much the paraphernalia of bed-sit existence as his wife’s illness, which is nevertheless reflected in the fevered and garish colours.
+
+
+
+
+
+
+
+
+
