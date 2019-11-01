@@ -477,6 +477,12 @@ nav a:focus {
     width: auto; /* prev 66% with aside */
   }
 
+  .collection {
+    margin: 0;
+    max-width: 900px;
+    max-height: 4000px;
+  }
+
   .divider {
     width: 40ch;
   }
