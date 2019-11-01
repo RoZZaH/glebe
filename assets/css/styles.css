@@ -201,6 +201,72 @@ Layout
   width: 100%;
   height: 50%;
 }
+/* changing header imgs */
+.gardens #header-img {
+  background-image: url("../img/x091125-Glebe-House-Gallery-008.jpg");
+  background-position-x: center;
+  background-position-y: bottom;
+}
+
+
+
+.float-text-left > p{
+  width: 100%;
+}
+
+.float-text-left figure {
+  position: relative;
+  margin-left: 2em;
+  float: right;
+}
+
+.float-text-right figure {
+  margin-right: 1.5em;
+  max-width: 50%;
+  float: left;
+}
+
+/* garden photo-frames */
+
+figure.photo-frame,
+.gardens .float-text-left figure,
+.gardens .float-text-right figure {
+  position: relative;
+  background: var(--white);
+  padding: 24px;
+  width: 50%;
+}
+
+.gardens .float-text-left figure {
+  transform: rotate(2deg);
+}
+
+.gardens .float-text-right figure {
+  transform: rotate(-2deg);
+}
+
+.gardens figure.no-rotate {
+  transform: rotate(0deg);
+}
+
+.gardens figure{
+  border: 1px solid var(--grey);
+}
+
+figure.photo-frame {
+  width: 100%;
+}
+
+figure.photo-frame figcaption,
+.gardens .float-text-left figcaption,
+.gardens .float-text-right figcaption  {
+  position: absolute;
+  bottom: 24px;
+  width: calc(100% - 48px);
+  z-index: 3;
+}
+
+
 
 header {
   display: flex;
@@ -243,19 +309,28 @@ header {
   text-decoration: none;
 }
 
-.key-info a:hover, .key-info a:focus  {
-  color: var(--orange);
+
+
+
+
+a:hover .under-dotted, a:focus .under-dotted {
+  border-bottom: 1px dotted var(--dark-blue);
+}
+
+a.no-dec {
   text-decoration: none;
 }
 
-
-a:link .under-dotted, a:visited .under-dotted {
-  border-bottom: 1px dotted var(--lightest-blue);
+a.no-dec .under-dotted {
+  border-bottom: 1px dotted var(--sky-blue);
 }
 
-a:hover .under-dotted, a:focus .under-dotted {
+.key-numbers .under-dotted:hover, .key-numbers .under-dotted:focus,
+.key-info a:hover, .key-info a:focus  {
+  color: var(--orange);
   border-bottom: 1px dotted var(--orange);
 }
+
 
 .opening-times {
   text-align: left;
@@ -364,12 +439,11 @@ nav a:focus {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  max-height: 3500px;
-  //max-height: 100vh;
-  justify-content: space-between;
-  align-items: center;
+  height: 3875px;
+  justify-content: flex-start;
+  /*align-items: str; */
   align-content: space-around; /* gutters */
-  min-width: 100%;
+  max-width: 900px;
 }
 
 
@@ -385,8 +459,7 @@ nav a:focus {
   background: rgba(177, 171, 106, 0.25);
   border-radius: 5px;
   min-width: 120px;
-  flex-basis: 0;
-  flex-grow: 1;
+  flex: 0;
   max-width: 260px;
 }
 
@@ -442,6 +515,7 @@ nav a:focus {
 }
 
 
+/* caption styling */
 
 .float-text-left figure,
 .float-text-right figure {
@@ -452,10 +526,9 @@ nav a:focus {
 .float-text-left figure img,
 .float-text-right figure img {
   width: 100%;
-  display: block;
 }
 
-
+.photo-frame figcaption,
 .float-text-left figcaption,
 .float-text-right figcaption {
   font-size: 0.8rem;
@@ -479,14 +552,15 @@ nav a:focus {
 
   .collection {
     margin: 0;
-    max-width: 900px;
-    max-height: 4000px;
+   /* max-width: 900px;
+    max-height: 4000px; */
   }
 
   .divider {
     width: 40ch;
   }
 
+  /*
   .two-col {
     display: flex;
     flex-basis: 48%;
@@ -495,10 +569,10 @@ nav a:focus {
   }
 
   .two-col figure {
-    width: 100%;
-    border: 1px blue dotted;
-    display: flex;
-    flex-direction: column;
+   // width: 100%;
+   // border: 1px blue dotted;
+   // display: flex;
+   // flex-direction: column;
   }
 
   .two-col figure img {
@@ -511,7 +585,7 @@ nav a:focus {
   .half-col {
     width: auto;
   }
-
+*/
   /* Derek Hill History of Glebe Hse Card */
   .section-card {
     flex-direction: row;
@@ -555,21 +629,28 @@ nav a:focus {
     float: right;
     clear: right;
   }
-  
+
+
+  .keep-right > p {
+    width: 43%;
+    float: right;
+    display: inline-block;
+  }
+  /*
   .float-text-right figure {
-    width: 50%;
-    float: left;
+    //width: 50%;
+    //float: left;
   }
   
   .float-text-right > p {
-    width: 48%;
-    float: right;
+   // width: 48%;
+    // float: right;
   }
 
   .ot-2 dd:last-of-type {
     // margin-top: 1.5em;
    }
-  
+  */
   
   .ot-4 {
     justify-content: flex-end;

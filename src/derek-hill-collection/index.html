@@ -16,7 +16,9 @@ layout: "layouts/collection.njk"
         <figcaption><i>{{ item.data.title }}</i>&nbsp; <small>[{{ item.data.medium }}]</small><br>
                     by <b>{{ item.data.artist }}</b> <small>({{ item.data.years }})</small></figcaption>
     </figure>
-    <div class="card-collection-info">{{ item.templateContent | safe }}</div>
+    <div class="card-collection-info">
+        {{ item.templateContent | safe }}
+    </div>
 </div>
 {% endfor %}
 </div>
