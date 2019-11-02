@@ -1,13 +1,16 @@
 ---
 layout: "layouts/events.njk"
+pageClass: "events"
 ---
+
+<div class="red">
 {% markdown %}
 ## test2
 
 
 ### test RTE
 {% endmarkdown %}
-
+</div>
 {% for event in collections.events %}
 
 <article class="article-recent">

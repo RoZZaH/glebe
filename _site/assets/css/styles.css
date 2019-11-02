@@ -114,10 +114,10 @@ h1 a {
   }
   
   strong {
-    /* bold 700 or bolder */
-    font-weight: 700;
+    font-weight: 700; /* bold 700 or bolder */
   }
 
+/* modifier classes */
   .tc {
     text-transform: capitalize;
   }
@@ -138,7 +138,6 @@ h1 a {
     border-radius: 5px;
   }
 
-  /* type modifiers */
   .site-title {
     text-align: left;
   }
@@ -173,18 +172,42 @@ h1 a {
   }
 
 
-  .divider {
-    background-color: var(--grey);
-    width: 30ch;
-    height: 2px;
-    border: 0;
-    margin: 2em auto;
-  }
+/* ================
+Gen Layout Containers + dividers hr
+================= */
+.container {
+  width: 96%;
+  max-width: 900px;
+  margin: 0 auto;
+}
 
+.container-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.divider {
+  background-color: var(--grey);
+  width: 30ch;
+  height: 2px;
+  border: 0;
+  margin: 2em auto;
+}
 
 /* =================
-Layout
+Header + Nav
 ================= */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 2em;
+  min-height: 50vh;
+  padding: 0;
+}
+
+
 
 #header-img {
   position: absolute;
@@ -193,8 +216,8 @@ Layout
   left: 0;
   background: rgba(177, 171, 106, 0.5);
   background-image: url("../img/x060407-Glebe-House-T-001.jpg");
-  background-position-x: 66%;
-  background-position-y: 33%;
+  background-position-x: center;
+  background-position-y: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: soft-light;
@@ -202,13 +225,151 @@ Layout
   height: 50%;
 }
 /* changing header imgs */
-.gardens #header-img {
-  background-image: url("../img/x091125-Glebe-House-Gallery-008.jpg");
-  background-position-x: center;
-  background-position-y: bottom;
+
+.home #header-img {
+  background-image: url("../img/x060407-Glebe-House-T-001.jpg");
+  background-position-x: 66%;
+  background-position-y: 33%;
 }
 
 
+.history #header-img {
+  background-image: url("../img/x091125-Glebe-House-Gallery-011.jpg");
+}
+.collection #header-img {
+  background-image: url("../img/x091125-Glebe-House-Gallery-042.jpg");
+}
+.events #header-img {
+  background-image: url("../img/gallery-space.jpg");
+  background-position-x: top;
+}
+.gardens #header-img {
+  background-image: url("../img/x091125-Glebe-House-Gallery-008.jpg");
+}
+
+.site-title, header nav {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.key-info {
+  background-color: rgba(4, 95, 199, 0.8);
+  border-left: 0;
+  border-right: 0;
+  padding: 0.25em;
+  display: flex;
+  justify-self: flex-start;
+  margin-bottom: auto;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  order: -1;
+  color: var(--white);
+}
+
+.opening-times {
+  text-align: left;
+  margin: 0;
+  padding: 0.2em;
+}
+
+
+a.no-dec {
+  text-decoration: none;
+}
+
+a.no-dec .under-dotted {
+  border-bottom: 1px dotted var(--sky-blue);
+}
+
+a:hover .under-dotted,
+a:focus .under-dotted {
+  border-bottom: 1px dotted var(--dark-blue);
+}
+
+.key-info a {
+  color: var(--lightest-blue);
+}
+.key-info a .under-dotted {
+  border-bottom: 1px dotted var(--lightest-blue);
+}
+.key-info a:hover,
+.key-info a:focus {
+  color: var(--orange);
+}
+.key-info a:hover .under-dotted,
+.key-info a:focus .under-dotted {
+  border-bottom: 1px dotted var(--orange);
+}
+
+.key-item ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 
+  justify-content: baseline;
+}
+
+.key-item li{
+  text-align: right;
+  margin-left: 0;
+  padding: 0.2em;
+}
+
+
+nav ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+nav li {
+    background: var(--offwhite-blue);
+    flex: 1;
+    /* https://css-tricks.com/notched-boxes/ || bennettfeely.com/clippy/ */
+    clip-path: 
+      polygon(
+        0% 0%, /* 0,0 (tl,tl) */
+        calc(100% - 20px) 0%, /* (tr, tr) */
+        calc(100% - 0.5px) 20px, /* (tr, tr) create tiny right gap */
+        calc(100% - 0.5px) 101%, /* (br, br) */
+        0% 101%);  /* (bl, bl) rid of tiny gap */
+    border-bottom: 2px solid var(--offwhite-blue);
+}
+
+nav a {
+  z-index: 1;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--donegal-green);
+  font-weight: 700;
+  padding: 2em 1em 2em;
+}
+
+nav a:hover,
+nav a:focus {
+    color: var(--dark-orange);
+}
+
+/* selected nav styles */
+
+.history #nav-history a,
+.collection #nav-collection a,
+.events #nav-events a,
+.gardens #nav-gardens a {
+  color: var(--dark-orange);
+  border-bottom: 5px solid var(--dark-orange);
+}
+
+/* =================
+Figures + Floats
+================ */
 
 .float-text-left > p{
   width: 100%;
@@ -267,155 +428,30 @@ figure.photo-frame figcaption,
 }
 
 
+/* caption styling */
 
-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  margin-bottom: 2em;
-  min-height: 50vh;
-  padding: 0;
-}
-
-.container {
-    width: 96%;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.container-flex {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-}
-
-.key-info {
-  background-color: rgba(4, 95, 199, 0.8);
-  border-left: 0;
-  border-right: 0;
-  padding: 0.25em;
-  display: flex;
-  justify-self: flex-start;
-  margin-bottom: auto;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  order: -1;
-  color: var(--white);
-}
-
-.key-info a:link, .key-info a:visited  {
-  color: var(--lightest-blue);
-  text-decoration: none;
-}
-
-
-
-
-
-a:hover .under-dotted, a:focus .under-dotted {
-  border-bottom: 1px dotted var(--dark-blue);
-}
-
-a.no-dec {
-  text-decoration: none;
-}
-
-a.no-dec .under-dotted {
-  border-bottom: 1px dotted var(--sky-blue);
-}
-
-.key-numbers .under-dotted:hover, .key-numbers .under-dotted:focus,
-.key-info a:hover, .key-info a:focus  {
-  color: var(--orange);
-  border-bottom: 1px dotted var(--orange);
-}
-
-
-.opening-times {
-  text-align: left;
-  margin: 0;
-  padding: 0.2em;
-}
-
-
-.key-item ul {
-  margin: 0;
-  padding-left: 0;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end; 
-  justify-content: baseline;
-}
-
-.key-item li{
-  text-align: right;
-  margin-left: 0;
-  padding: 0.2em;
-}
-
-
-.site-title, header nav {
-  width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-nav ul {
-    margin: 0;
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-nav li {
-    background: var(--offwhite-blue);
-    flex: 1;
-    /* https://css-tricks.com/notched-boxes/ || bennettfeely.com/clippy/ */
-    clip-path: 
-      polygon(
-        0% 0%, /* 0,0 (tl,tl) */
-        calc(100% - 20px) 0%, /* (tr, tr) */
-        calc(100% - 0.5px) 20px, /* (tr, tr) create tiny right gap */
-        calc(100% - 0.5px) 101%, /* (br, br) */
-        0% 101%);  /* (bl, bl) rid of tiny gap */
-    border-bottom: 2px solid var(--offwhite-blue);
-}
-
-nav a {
-  z-index: 1;
-    display: inline-block;
-    text-decoration: none;
-    color: var(--donegal-green);
-    font-weight: 700;
-    padding: 2em 1em 2em;
-}
-
-nav a:hover,
-nav a:focus {
-    color: var(--dark-orange);
-}
-
-.current-page {
-    border-bottom: 1px solid var(--grey);
-}
-
-.current-page:hover {
-    color: var(--grey);
-}
-
-
-.ot-3, .ot-4 {
+.float-text-left figure,
+.float-text-right figure {
   position: relative;
-  top: 2em;
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
 }
 
-.opening-section + hr {
-  position: relative;
-  top: 1em;
+.float-text-left figure img,
+.float-text-right figure img {
+  width: 100%;
+}
+
+.photo-frame figcaption,
+.float-text-left figcaption,
+.float-text-right figcaption {
+  font-size: 0.8rem;
+  padding: 0.5em 0.8em;
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, .6);
+  color: white;
+  float: left;
 }
 
 /* =================
@@ -469,17 +505,16 @@ nav a:focus {
 
 .card-collection:nth-child(3n+2) {
   margin-top: 0.55em;
- }
+}
 
 
- .card-collection:nth-child(10n) {
+.card-collection:nth-child(10n) {
   margin-top: 2em;
- }
- 
- .card-collection:nth-child(15n) {
-  margin-top: 4.75em;
- }
+}
 
+.card-collection:nth-child(15n) {
+  margin-top: 4.75em;
+}
 
 
 .card-collection-fig {
@@ -515,30 +550,6 @@ nav a:focus {
 }
 
 
-/* caption styling */
-
-.float-text-left figure,
-.float-text-right figure {
-  position: relative;
-  margin-bottom: 1.5em;
-}
-
-.float-text-left figure img,
-.float-text-right figure img {
-  width: 100%;
-}
-
-.photo-frame figcaption,
-.float-text-left figcaption,
-.float-text-right figcaption {
-  font-size: 0.8rem;
-  padding: 0.5em 0.8em;
-  position: absolute;
-  bottom: 0;
-  background: rgba(0, 0, 0, .6);
-  color: white;
-  float: left;
-}
 
 
 @media (min-width: 675px){
@@ -560,32 +571,21 @@ nav a:focus {
     width: 40ch;
   }
 
-  /*
-  .two-col {
-    display: flex;
-    flex-basis: 48%;
-    justify-content: space-between;
-    align-items: stretch;
+  .gardens #nav-gardens a,
+  .history #nav-history a,
+  .collection #nav-collection a,
+  .events #nav-events a {
+  border-bottom: 2px solid var(--dark-orange);
+  border-image: linear-gradient(
+    to right,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0) 30%,
+    var(--dark-orange) 30%,
+    var(--dark-orange) 70%,
+    rgba(255,255,255,0) 70%,
+    rgba(255,255,255,0) 100%) 1;
   }
 
-  .two-col figure {
-   // width: 100%;
-   // border: 1px blue dotted;
-   // display: flex;
-   // flex-direction: column;
-  }
-
-  .two-col figure img {
-    object-fit: cover;
-    flex-basis: 350px;
-    min-height: 0;
-    min-width: 0;
-  }
-
-  .half-col {
-    width: auto;
-  }
-*/
   /* Derek Hill History of Glebe Hse Card */
   .section-card {
     flex-direction: row;
@@ -606,7 +606,7 @@ nav a:focus {
   }
   .section-card-content p {
   }
-/*   */ 
+/* floats etc and higher res  */ 
   .group > p {
     margin-top: 0;
   }
@@ -636,22 +636,7 @@ nav a:focus {
     float: right;
     display: inline-block;
   }
-  /*
-  .float-text-right figure {
-    //width: 50%;
-    //float: left;
-  }
-  
-  .float-text-right > p {
-   // width: 48%;
-    // float: right;
-  }
 
-  .ot-2 dd:last-of-type {
-    // margin-top: 1.5em;
-   }
-  */
-  
   .ot-4 {
     justify-content: flex-end;
     margin-top: auto;
@@ -662,13 +647,7 @@ nav a:focus {
 
 
 
-footer {
-  margin-top: 2em;
-  background-color: var(--donegal-green);
-  color: var(--white);
-  padding: 1.5em 0 4em;
-  text-align: center;
-}
+
 
 .opening-section, .booking-section {
  flex-flow: row wrap;
@@ -695,7 +674,7 @@ ul.dashed > li:before {
 }
 
 /* =================
-Opening Times
+Opening Times - homepage
 ================= */
 dl {
   margin: 0;
@@ -728,6 +707,16 @@ dd:last-of-type {
   width: 36ch;
   margin: auto 0.75em 0;
  }
+
+ .ot-3, .ot-4 {
+  position: relative;
+  top: 2em;
+}
+
+.opening-section + hr {
+  position: relative;
+  top: 1em;
+}
 
 
 
@@ -908,6 +897,17 @@ button:focus {
 }
 
 
+/* ===============
+   FOOTER 
+=============== */
+footer {
+  margin-top: 2em;
+  background-color: var(--donegal-green);
+  color: var(--white);
+  padding: 1.5em 0 4em;
+  text-align: center;
+}
+
 @media (min-width: 675px) {
   .article-recent {
     flex-direction: row;
@@ -984,7 +984,6 @@ button:focus {
   .key-numbers {
     white-space: pre-line;
   }
-
 }
 
 @media(min-width: 800px){
@@ -1081,6 +1080,20 @@ button:focus {
   nav li {
     clip-path: none;
     border-bottom: 1px solid grey;
+  }
+
+  nav li:last-of-type {
+    border: 0;
+  }
+
+  .ot-3, .ot-4 {
+    position: relative;
+    top: 2em;
+  }
+  
+  .opening-section + hr {
+    position: relative;
+    top: 1em;
   }
 
 }
