@@ -1306,6 +1306,12 @@ i.fas{
     flex: 0 0 1; 
   } 
 
+  .float-text-left figure {
+    margin: 0.25em auto;
+    width: 96%;
+    float: none;
+  }
+
 }
 
 @media(max-width: 359px){
@@ -1326,10 +1332,6 @@ i.fas{
     margin: 0;
   }
 
-  .float-text-left figure {
-    margin: 0.25em auto;
-    width: 96%;
-    float: none;
-  }
+ 
 
 }
