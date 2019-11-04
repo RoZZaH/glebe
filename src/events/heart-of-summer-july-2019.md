@@ -1,8 +1,10 @@
 ---
-layout: "layouts/events.njk"
 title: "Olivia O’Leary presents The Heart of Summer"
 description: "A feast of music and poetry with acclaimed journalist and presenter of the RTÉ Poetry Programme"
 featuredImage: "/assets/img/events/poetry-ireland.jpg"
+featuredImagePositionClass: "img-left"
+date: 2019-07-11
+eventDates: "Wednesday 11th July, 8pm"
 tags: "events"
 ---
 

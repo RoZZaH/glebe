@@ -1,0 +1,71 @@
+---
+layout: "layouts/events.njk"
+pageClass: "events"
+event.data.featuredImagePositionClass: "boo"
+---
+
+<h2>Exhibitions & Events</h2>
+
+<p>Our exciting programme for events continues this year...<br><br></p>
+
+<hr class="left divider">
+<br>
+
+{% for event in collections.events | reverse %}
+
+<article class="article-recent">
+    <div class="article-recent-main">
+        <h3 class="article-title">{{ event.data.title }}</h3>
+        <h4 class="article-title">{{ event.data.description }}</h4>
+        <h5 class="article-title">{{ event.data.eventDates }}</h5>
+        <p class="article-body">{{ event.templateContent | safe }}</p>
+    </div>
+    <div class="article-recent-secondary
+    {% if event.data.featuredImagePositionClass %} 
+    {{ event.data.featuredImagePositionClass }}
+    {% endif %}">
+        <img src="{{ event.data.featuredImage | url }}" alt="Glebe Interior" class="article-image">
+    </div>
+</article>
+{% if loop.first %}
+<hr class="divider">
+<h2>Previous Events</h2>
+<br>
+{% endif %}
+{% endfor %}
+
+<!-- 
+
+BE(LONGING): Selena Mowat at the Glebe Gallery
+31st May – 1st July 2014
+This was Donegal-based Scottish artist, Selena Mowat’s, first major show. Mowat was the winner of Sky’s Portrait Artist of the Year (Ireland) in 2013, and a graduate of Art and Design in the University of Dundee. This exhibition collected thirty portraits and twenty landscapes.
+
+“The exhibition is called (Be)longing as it’s central theme is about the sense of belonging to a place and I painted the works in three different places.” – Mowat.
+
+
+The Road Taken/ An Bóthar Taistealta: Derek Hill’s Donegal Legacy
+7 July – 29 September 2013
+Derek Hill lived in Donegal for 50 years and in that time he brought a host of iconic cultural figures to visit Donegal, contributing significantly to the local arts scene.
+
+The Road Taken looks what happens when you choose the more interesting path, the challenges and rewards resulting from taking the more uncertain road. In Hill’s case it brought him to County Donegal, a place whose beauty and people he wanted to share with his friends.
+
+This exhibition sought to explore Hill’s effect on the arts in Donegal and included works by internationally renowned artists like Henry Moore, Sidney Nolan, Jack Yeats, Victor Pasmore, Josef Beuys and Victor Vasarely, as well as the many Irish Artists he became close to. It also contained a wealth of never before seen archival material.
+
+Derek Hill once inspired legendary British composer Benjamin Britten to compose a choral work in commemoration of Saint Colmcille. To celebrate the centenary of Britten’s birth, his Hymn to St. Columba was performed at the opening of the exhibition on Sunday the 7th of July at 4pm.
+
+The Glebe Gallery/Office of Public Works presented this exhibition in association with Earagail Arts Festival. 
+
+
+The Donegal Hills: Derek Hill’s Donegal Paintings
+1 August – 3 October 2010
+On the tenth anniversary of the death of Derek Hill the Office of Public Works exhibited a collection of his paintings. The Donegal Hills celebrated Derek’s life in Donegal with portraits and landscapes drawn from public and private collections throughout Ireland and the UK.
+
+Some highlights from the exhibition are presented here. All images are copyrighted to the Office of Public Works, and all originals are in the Derek Hill Collection at Glebe House and Gallery.
+
+You can download a a low-resolution PDF of the exhibition catalogue here.
+
+<aside>
+an aside
+</aside>
+
+-->

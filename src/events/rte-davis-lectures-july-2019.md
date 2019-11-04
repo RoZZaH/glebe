@@ -1,23 +1,20 @@
 ---
-layout: "layouts/events.njk"
 title: "RTÉ Radio 1 DAVIS NOW LECTURES 2019"
 description: "Irish Theatre Performance and the evolving presence of home in Irish theatre."
 featuredImage: "/assets/img/events/Davis-Now-Lecture-Series-2019.jpg"
+featuredImagePositionClass: ""
+date: 2019-07-21
+eventDates: "2pm, Saturday 21st July 2019"
 tags: "events"
 ---
 
-<h2>RTÉ Radio 1 DAVIS NOW LECTURES 2019</h2>
-### 2pm, Saturday 21st July 2019
-
-“Irish Theatre Performance and the evolving presence of home in Irish theatre.“
-
-Róise Goan, Artsadmin London Artistic Director from August 2019.
+Speaker: Róise Goan, Artsadmin London Artistic Director from August 2019.
 
 Contributing guests include Emer McGowan, Director Draiocht, Blanchardstown.
 
-To get your FREE tickets: www.eventbrite.com
+To get your FREE tickets on [eventbrite.com](https://www.eventbrite.com/e/rte-radio-1-davis-now-lectures-2019-tickets-65247060715)
 
-About the series
+#### About the series
 
 The RTÉ Radio 1 DAVIS NOW LECTURES 2019 present aspects of MAKING HOME by contributors renowned in their fields of ARCHITECTURE, HISTORY, TECHNOLOGY, ARTS and ECONOMICS.
 

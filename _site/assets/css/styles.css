@@ -2,7 +2,7 @@
 :root {
     --white: #fff;
     --warm-grey: #EBEBEB;
-    --warm-light-grey: #F8F8F8;
+    --warm-light-grey: rgb(226, 225, 225);
     --light-blue: #1792D2;
     --dark-blue: #143774;
     --grey: rgb(156, 156, 156);
@@ -11,10 +11,14 @@
     --lightest-blue: rgb(189, 240, 253);
     --sky-blue: #086ac7;
     --donegal-green: rgb(12, 87, 9);
+    --light-green: rgb(7, 112, 4);
     --dark-orange: rgb(211, 69, 3);
     --orange: orange;
+    --light-orange: rgb(228, 134, 91);
     --offwhite-blue: rgb(255, 244, 233);
     --brown: brown;
+    --khaki: #c4965b;
+    --twitter-blue: #22b8cf;
   }
 
   * {
@@ -130,6 +134,14 @@ h1 a {
     text-align: center;
   }
 
+  .left {
+    text-align: left;
+  }
+
+  .right {
+    text-align: right;
+  }
+
   .r3 {
     border-radius: 3px;
   }
@@ -237,7 +249,7 @@ header {
   background-image: url("../img/x091125-Glebe-House-Gallery-011.jpg");
 }
 .collection #header-img {
-  background-image: url("../img/x091125-Glebe-House-Gallery-042.jpg");
+  background-image: url("../img/091125-Glebe-House-Gallery-042.jpg");
 }
 .events #header-img {
   background-image: url("../img/gallery-space.jpg");
@@ -475,7 +487,7 @@ figure.photo-frame figcaption,
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 3875px;
+  height: 6000px;
   justify-content: flex-start;
   /*align-items: str; */
   align-content: space-around; /* gutters */
@@ -569,6 +581,11 @@ figure.photo-frame figcaption,
 
   .divider {
     width: 40ch;
+  }
+
+  .events .divider {
+    width: 30ch;
+    background-color: var(--light-green);
   }
 
   .gardens #nav-gardens a,
@@ -728,7 +745,7 @@ Contact Form
   background: MistyRose;
   padding: 2em;
   border-radius: 10px;
-  width: 720px;
+  max-width: 720px;
   margin: 0 auto;
 }
 
@@ -896,17 +913,155 @@ button:focus {
   order: 1;
 }
 
+h3.article-title{ 
+  color: var(--donegal-green);
+  margin-bottom: 0.25em;
+}
+h4.article-title {
+  color: var(--light-green);
+  margin-bottom: 0.5em;
+}
+
+
 
 /* ===============
    FOOTER 
 =============== */
 footer {
+  --bottom-padding: 15px;
   margin-top: 2em;
-  background-color: var(--donegal-green);
-  color: var(--white);
-  padding: 1.5em 0 4em;
+  margin-bottom: 0;
+  padding-bottom: var(--bottom-padding);
+  border-top: 5px solid var(--donegal-green);
+  background: var(--light-green);
+  border-bottom: calc(1.125 * var(--bottom-padding)) solid	rgb(3, 41, 7);
+  color: var(--warm-light-grey);
+  text-shadow: 1px 1px #424242;
+  padding: 1.5em 1em 4em;
+  font-size: 0.9em;
+  line-height: 1.5em;
+}
+
+footer i {
+  text-shadow: none;
+}
+
+footer a {
+  color: var(--warm-light-grey);
+}
+
+footer a.no-dec .under-dotted{
+  border-bottom: 1px dotted var(--warm-light-grey);
+}
+
+footer a.no-dec:hover,
+footer a.no-dec:focus {
+  color: var(--twitter-blue);
+  text-shadow: 1px 1px var(--dark-blue);
+}
+
+footer a.no-dec:hover .under-dotted,
+footer a.no-dec:focus .under-dotted{
+  border-bottom: 1px dotted var(--lightest-blue);
+}
+
+footer abbr,
+i.fas{
+  text-decoration: none;
+}
+
+/* .footer-col-1 */
+.h-card {
+  margin-top: 0;
+}
+
+.p-org {
+  font-family: 'Lora', serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.p-region,
+.p-region abbr,
+.p-country-name,
+.p-postal-code,
+.g-maps {
+  margin-left: 2.25ch;
+}
+
+/* footer-col-2  */
+
+.footer-col-2 h6 {
+  margin-top: 0em;
+  margin-bottom: 0.75em;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--warm-light-grey);
+  letter-spacing: 1px;
+}
+
+/* .footer-col-3 */
+
+.footer-col-3 {
+  justify-self: stretch;
+  background: none !important;
+  color: var(--warm-light-grey);
+  text-shadow: none;
+  padding: 0px !important;
+}
+
+.social-icons {
+  margin-bottom: auto;
+}
+
+.social-icons ul {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.social-icons li {
+  background: var(--offwhite-blue);
+  border-radius: 5px;
+  padding: 8px 12px;
+}
+
+.social-icons a {
+  text-shadow: none;
+  font-size: 1.75rem;
+}
+
+.fa-facebook {
+  color: var(--light-blue);
+}
+
+.fa-twitter {
+  color: var(--twitter-blue);
+}
+
+.fa-tripadvisor {
+  color: var(--light-green);
+}
+
+.fa-facebook:hover,
+.fa-facebook:focus,
+.fa-twitter:hover,
+.fa-twitter:focus,
+.fa-tripadvisor:hover,
+.fa-tripadvisor:focus
+ {
+  color: var(--dark-orange);
+}
+
+.footer-copyright p {
   text-align: center;
 }
+
+
 
 @media (min-width: 675px) {
   .article-recent {
@@ -927,7 +1082,11 @@ footer {
     min-height: 250px;
     object-fit: cover;
     object-position: center;
-   /* object-position: left; */
+  }
+
+  .img-left .article-image {
+    object-fit: contain;
+    object-position: left top;
   }
 
   .article-featured {
@@ -959,7 +1118,6 @@ footer {
     object-fit: initial;
   }
 
-  
   .otimes {
     flex: 0 1 48%;
   }
@@ -968,6 +1126,45 @@ footer {
     position: initial;
   }
 
+  footer {
+    --bottom-padding: 3.5em;
+    background-image: url("../img/090323-D-Hill-Collection-006.jpg");
+    background-color: var(--khaki);
+    background-blend-mode: multiply;
+  }
+    
+  .footer-cols {
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  .footer-cols > div {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 250px;
+    background: rgba(250, 250, 210, 0.3);
+    padding: 8px 12px;
+    border-radius: 5px;
+  }
+
+  .footer-col-1 {
+    margin-right: 22px;
+  }
+
+  .footer-col-1, .footer-col-2 {
+    line-height: 1.75em;
+  }
+
+  .footer-col-2 {
+    align-self: flex-end;
+  }
+
+  .footer-copyright {
+    margin-top: auto;
+  }
+  .footer-copyright p{
+    text-align: right;
+  }
 
 }
 
@@ -990,12 +1187,24 @@ footer {
   .half-col {
     width: 48%;
   }
+
+  .cards-collection {
+    height: 3875px;
+  }
+
 }
 
 @media(max-width: 780px){
+
+  body {
+    font-size: 1rem;
+  }
+
+  
   .collection-card{
     flex-basis: 0 1 48%;
   }
+
 }
 
 @media(min-width: 600px){
@@ -1009,15 +1218,14 @@ footer {
 }
 
 @media (max-width: 675px){
-  
+
   .container {
     margin: auto;
   }
 
   .container-flex {
-    flex-direction: row;
+    flex-direction: column;
   }
-
 
   header {
     justify-content: flex-end;
@@ -1032,8 +1240,6 @@ footer {
     margin: 0;
     padding: 0;
   }
-
-
 
   .key-info {
     order: 0;
@@ -1057,8 +1263,6 @@ footer {
     white-space: pre-line;
     margin-bottom: 0; 
   }
-
-
   
   .key-item ul {
     justify-content: space-around;
@@ -1096,6 +1300,10 @@ footer {
     top: 1em;
   }
 
+  .footer-cols > div {
+    flex: 0 0 1; 
+  } 
+
 }
 
 @media(max-width: 359px){
@@ -1114,6 +1322,12 @@ footer {
 
   .subtitle {
     margin: 0;
+  }
+
+  .float-text-left figure {
+    margin: 0.25em auto;
+    width: 96%;
+    float: none;
   }
 
 }
