@@ -4,47 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glebe House</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lora&effect=outline" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&display=swap" rel="stylesheet">
+    <!-- Google Fonts --> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora&effect=outline">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&display=swap">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" crossorigin="anonymous">
     <!-- Proj CSS -->
-    <link rel="stylesheet" href="/assets/css/styles.css" type="text/css">
-    <style>
-    /* local styles */
-    </style>
+    <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body class="home">
 <div id="header-img"></div>
     <header>
- <!-- schema <div class="vcard">-->
-
-            <div class="site-title">
-                <div class="font-effect-outline">
-                    <h1 class="fn org"><a href="/">Glebe House &amp; Gallery</a></h1>
-                </div>
-                    <p class="note subtitle"><span>Historic home of renowned artist, <a href="/glebe-house/#derek-hill">Derek&nbsp;Hill</a>, in <a href="/getting-here">Churchill</a>, County Donegal</span></p>
+        <div class="site-title">
+            <div class="font-effect-outline">
+                <h1 class="fn org"><a href="/">Glebe House &amp; Gallery</a></h1>
             </div>
-            <div class="key-info">
-                <div class="key-item key-times"><!-- preline -->
-                    <p class="opening-times"><a href="/#opening-times" class="no-dec"><i class="far fa-clock"></i> <span class="under-dotted">Opening Hours</span> :</a>
-                                                    [Currently&nbsp;Closed]</p><p class="opening-times">Today (Sat): 11:30&#8209;17:30
-                                                    |&nbsp;Tomorrow (Sun): Closed</a></p>
-                </div>
-                <div class="key-item">
-                    <ul><!-- preline -->
-                        <li class="key-numbers"><span class="sr">Information &amp; <a href="/#tours" class="no-dec"><span class="under-dotted">Group Tours</span></a>
-                        </span> <a href="tel:+353749137071" class="no-dec"><i class="fas fa-info-circle"></i> +353 74 913&nbsp;7071</a></li>
-                        <li><span class="sr">Glebe Tea-Rooms</span> <a href="tel:+353749137071" class="no-dec"><i class="fas fa-mug-hot"></i> +353 87 329&nbsp;7169</a></li>
-                    </ul>
-                </div>
+                <p class="note subtitle"><span>Historic home of renowned artist, <a href="/glebe-house/#derek-hill">Derek&nbsp;Hill</a>, in <a href="/getting-here">Churchill</a>, County Donegal</span></p>
+        </div>
+        <div class="key-info">
+            <div class="key-item key-times"><!-- preline -->
+                <p class="opening-times"><a href="/#opening-times" class="no-dec"><i class="far fa-clock"></i> <span class="under-dotted">Opening Hours</span> :</a>
+                                                [Currently&nbsp;Closed]</p><p class="opening-times">Today (Sat): 11:30&#8209;17:30
+                                                |&nbsp;Tomorrow (Sun): Closed</a></p>
             </div>
-            <nav><ul><li id="nav-history" class="chamfered-right"><a href="/glebe-house/">History of Glebe&nbsp;House</a></li>
-                     <li id="nav-collection" class="chamfered-right"><a href="/derek-hill-collection/">The Derek&nbsp;Hill Collection</a></li>
-                     <li id="nav-events" class="chamfered-right"><a href="/events/">Glebe Gallery &amp;&nbsp;Events</a></li>
-                     <li id="nav-gardens" class="chamfered-right"><a href="/gardens-and-tearooms/">The Gardens &amp;&nbsp;Tea&#8209;Rooms</a></li></ul></nav>
-            </header>
+            <div class="key-item">
+                <ul><!-- preline -->
+                    <li class="key-numbers"><span class="sr">Information &amp; <a href="/#tours" class="no-dec"><span class="under-dotted">Group Tours</span></a>
+                    </span> <a href="tel:+353749137071" class="no-dec"><i class="fas fa-info-circle"></i> +353 74 913&nbsp;7071</a></li>
+                    <li><span class="sr">Glebe Tea-Rooms</span> <a href="tel:+353749137071" class="no-dec"><i class="fas fa-mug-hot"></i> +353 87 329&nbsp;7169</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav><ul><li id="nav-history" class="chamfered-right"><a href="/glebe-house/">History of Glebe&nbsp;House</a></li>
+                <li id="nav-collection" class="chamfered-right"><a href="/derek-hill-collection/">The Derek&nbsp;Hill Collection</a></li>
+                <li id="nav-events" class="chamfered-right"><a href="/events/">Glebe Gallery &amp;&nbsp;Events</a></li>
+                <li id="nav-gardens" class="chamfered-right"><a href="/gardens-and-tearooms/">The Gardens &amp;&nbsp;Tea&#8209;Rooms</a></li></ul></nav>
+    </header>
 <div id="wrapper" class="container">
         
 <div class="container">
@@ -131,7 +126,7 @@
     </div>
  <!--    <hr class="divider"> -->
     <!-- <div class="container-flex"> -->
-    <!-- based partially on https://webdesign.tutsplus.com/tutorials/building-responsive-forms-with-flexbox--cms-26767 -->
+    <!-- based partially on webdesign.tutsplus.com/tutorials/building-responsive-forms-with-flexbox--cms-26767 -->
         <form action"#" method="POST">
         <p class="ctr form-heading"><strong>Booking Enquiry</strong></p>
     <!--    <hr class="divider divider--form"> -->
@@ -186,7 +181,7 @@
             </li>
             <li>
                 <label for="date-of-visit"><span class="tc">(Intended)</span><br>Date of Visit:</label>  
-                    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date NB: Not supported by Safari/IE11 -->
+                    <!-- developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date NB: Not supported by Safari/IE11 -->
                     <input type="date" id="date-of-visit" name="date-of-visit" value="2019-11-10" min="2019-01-01" max="2021-12-31">
             </li>
             <li>
@@ -203,55 +198,8 @@
         <p class="ctr">Enquiries generally take 2 days to process,<br>if you require a response more urgently please contact us directly<br>on <a href="tel:+353749137071"><i class="fas fa-info-circle"></i> +353 74 913&nbsp;7071</a></p>
       </form>
    <!-- </div> -->
-<style>
-/* testing conditional visibility */
-/* ref https://codepen.io/memco/pen/BajpD */
-#edu:checked ~ li#conditional1 {
-				clip: auto;
-				height: auto;
-				margin: 0;
-				overflow: visible;
-				position: static;
-				width: auto;
-			}
-
-#edu:not(:checked) ~ li#conditional1
-{
-				border: 0;
-				clip: rect(0 0 0 0);
-				height: 1px;
-				margin: -1px;
-				overflow: hidden;
-				padding: 0;
-				position: absolute;
-				width: 1px;
-			}
-#tour:checked ~ li#conditional2 {
-				clip: auto;
-				height: auto;
-				margin: 0;
-				overflow: visible;
-				position: static;
-				width: auto;
-			}
-
-#tour:not(:checked) ~ li#conditional2
-{
-				border: 0;
-				clip: rect(0 0 0 0);
-				height: 1px;
-				margin: -1px;
-				overflow: hidden;
-				padding: 0;
-				position: absolute;
-				width: 1px;
-			}
-
-</style>
 
 
-        <!-- widget - o[pening times , ticket prices 
-        tours - the house and the gallery 
     
 
 
@@ -260,24 +208,6 @@
 
     
 
-Holders of the Heritage Card gain free admission. The first Wednesday of every month is free for everyone. School groups are also entitled to free entry.
-
-
-School Bookings
-
-School visits are offered free of charge, however, advance booking is required. To arrange a school visit or to enquire about our workshops and other educational sessions, please contact us.
-
-To find out more about our education programme or to see what education resource packs we offer, please click here.
-
-
-General Group Bookings
-
-Advance booking for groups of more than eight people is required. Please contact us to enquire about group rates or to make a booking.
-
-We offer special rates to tour operators for pre-booked tours (both guided and self-guided) for groups. Please email us for more details.
-
-
--->
     
 
 
@@ -293,7 +223,7 @@ We offer special rates to tour operators for pre-booked tours (both guided and s
             <div class="container-flex footer-cols">
                 <div class="footer-col-1">
                 <!-- Address in hCard microformat
-                     http://microformats.org/wiki/h-card -->
+                     microformats.org/wiki/h-card -->
                     <p class="h-card">
                     <a class="p-org u-url no-dec" href="https://rozzah.github.io/glebe"><span class="under-dotted">Glebe House and Gallery</span></a><br>
                     <i class="far fa-envelope"></i> <span class="p-locality">Churchill</span><br>
@@ -335,8 +265,7 @@ We offer special rates to tour operators for pre-booked tours (both guided and s
                       <p>&copy; 2019 | RoZZaH</p>
                     </div>
                 </div>
-        <!-- footer as include -->
-      
+        <!-- footer as include? -->
             </div>
         </div>
     </footer>  

@@ -84,7 +84,7 @@ pageClass: "home"
     </div>
  <!--    <hr class="divider"> -->
     <!-- <div class="container-flex"> -->
-    <!-- based partially on https://webdesign.tutsplus.com/tutorials/building-responsive-forms-with-flexbox--cms-26767 -->
+    <!-- based partially on webdesign.tutsplus.com/tutorials/building-responsive-forms-with-flexbox--cms-26767 -->
         <form action"#" method="POST">
         <p class="ctr form-heading"><strong>Booking Enquiry</strong></p>
     <!--    <hr class="divider divider--form"> -->
@@ -139,7 +139,7 @@ pageClass: "home"
             </li>
             <li>
                 <label for="date-of-visit"><span class="tc">(Intended)</span><br>Date of Visit:</label>  
-                    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date NB: Not supported by Safari/IE11 -->
+                    <!-- developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date NB: Not supported by Safari/IE11 -->
                     <input type="date" id="date-of-visit" name="date-of-visit" value="2019-11-10" min="2019-01-01" max="2021-12-31">
             </li>
             <li>
@@ -156,55 +156,8 @@ pageClass: "home"
         <p class="ctr">Enquiries generally take 2 days to process,<br>if you require a response more urgently please contact us directly<br>on <a href="tel:+353749137071"><i class="fas fa-info-circle"></i> +353 74 913&nbsp;7071</a></p>
       </form>
    <!-- </div> -->
-<style>
-/* testing conditional visibility */
-/* ref https://codepen.io/memco/pen/BajpD */
-#edu:checked ~ li#conditional1 {
-				clip: auto;
-				height: auto;
-				margin: 0;
-				overflow: visible;
-				position: static;
-				width: auto;
-			}
 
-#edu:not(:checked) ~ li#conditional1
-{
-				border: 0;
-				clip: rect(0 0 0 0);
-				height: 1px;
-				margin: -1px;
-				overflow: hidden;
-				padding: 0;
-				position: absolute;
-				width: 1px;
-			}
-#tour:checked ~ li#conditional2 {
-				clip: auto;
-				height: auto;
-				margin: 0;
-				overflow: visible;
-				position: static;
-				width: auto;
-			}
-
-#tour:not(:checked) ~ li#conditional2
-{
-				border: 0;
-				clip: rect(0 0 0 0);
-				height: 1px;
-				margin: -1px;
-				overflow: hidden;
-				padding: 0;
-				position: absolute;
-				width: 1px;
-			}
-
-</style>
 {% endblock %}
-
-        <!-- widget - o[pening times , ticket prices 
-        tours - the house and the gallery 
     
 
 
@@ -213,22 +166,4 @@ pageClass: "home"
 
     
 
-Holders of the Heritage Card gain free admission. The first Wednesday of every month is free for everyone. School groups are also entitled to free entry.
-
-
-School Bookings
-
-School visits are offered free of charge, however, advance booking is required. To arrange a school visit or to enquire about our workshops and other educational sessions, please contact us.
-
-To find out more about our education programme or to see what education resource packs we offer, please click here.
-
-
-General Group Bookings
-
-Advance booking for groups of more than eight people is required. Please contact us to enquire about group rates or to make a booking.
-
-We offer special rates to tour operators for pre-booked tours (both guided and self-guided) for groups. Please email us for more details.
-
-
--->
     

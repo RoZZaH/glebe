@@ -1,0 +1,45 @@
+<style type="text/css">
+/* testing conditional visibility */
+/* ref https://codepen.io/memco/pen/BajpD */
+#edu:checked ~ li#conditional1 {
+				clip: auto;
+				height: auto;
+				margin: 0;
+				overflow: visible;
+				position: static;
+				width: auto;
+			}
+
+#edu:not(:checked) ~ li#conditional1
+{
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+#tour:checked ~ li#conditional2 {
+				clip: auto;
+				height: auto;
+				margin: 0;
+				overflow: visible;
+				position: static;
+				width: auto;
+			}
+
+#tour:not(:checked) ~ li#conditional2
+{
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+
+</style>
