@@ -186,6 +186,9 @@ h1 a {
 /* ================
 Gen Layout Containers + dividers hr
 ================= */
+#wrapper {
+  position: relative;
+}
 .container {
   width: 96%;
   max-width: 900px;
@@ -432,6 +435,7 @@ figure.photo-frame,
 }
 
 figure.photo-frame {
+  margin: 1em 0;
   width: 96%;
 }
 
@@ -448,7 +452,8 @@ figure.photo-frame figcaption,
 /* caption styling */
 
 .float-text-left figure,
-.float-text-right figure {
+.float-text-right figure,
+.section-card-img figure {
   position: relative;
   margin-top: 0.5em;
   margin-bottom: 1.5em;
@@ -460,6 +465,7 @@ figure.photo-frame figcaption,
 }
 
 .photo-frame figcaption,
+.section-card-img figcaption,
 .float-text-left figcaption,
 .float-text-right figcaption {
   font-size: 0.8rem;
@@ -486,6 +492,10 @@ figure.photo-frame figcaption,
   flex-basis: 33%;
   min-height: 0;
   min-width: 0;
+}
+
+.section-directions {
+  margin-bottom: 1.5em;
 }
 
 .card {
@@ -820,6 +830,33 @@ h4.article-title {
   margin-bottom: 0.5em;
 }
 
+a.back-to-top {
+  position: absolute;
+  bottom: -2.5em;
+  right: 0;
+  display: block;
+  text-align: center;
+  color: var(--dark-grey);
+  text-decoration: none;
+}
+
+a.back-to-top i {
+  font-size: 1.25rem;
+}
+
+a.back-to-top .under-dotted {
+  border-bottom: 1px dotted var(--dark-grey);
+}
+
+a.back-to-top:hover,
+a.back-to-top:focus {
+  color: var(--light-blue);
+}
+
+a.back-to-top:hover .under-dotted {
+  border-bottom: 1px dotted var(--light-blue);
+}
+
 
 
 /* ===============
@@ -827,8 +864,7 @@ h4.article-title {
 =============== */
 footer {
   --bottom-padding: 15px;
-  margin-top: 2em;
-  margin-bottom: 0;
+  margin:3.5em 0 0;
   padding-bottom: var(--bottom-padding);
   border-top: 5px solid var(--donegal-green);
   background: var(--light-green);
@@ -955,6 +991,16 @@ i.fas{
   color: var(--dark-orange);
 }
 
+
+
+.org-links ul {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
 .footer-copyright p {
   text-align: center;
 }
@@ -1040,7 +1086,7 @@ i.fas{
     flex: 0 1 auto;
     max-width: 275px;
   }
-  
+
 }
 
 
@@ -1244,6 +1290,7 @@ i.fas{
     clear: right;
   }
 
+  .section-directions figure,
   .gardens .float-text-left figure:first-of-type {
     transform: rotate(2deg);
   }  
@@ -1353,8 +1400,11 @@ i.fas{
   }
 
   footer {
+    margin-top: 3.5em;
     --bottom-padding: 3.5em;
     background-image: url("../img/090323-D-Hill-Collection-006.jpg");
+    object-fit: cover;
+    background-position: top center;
     background-color: var(--khaki);
     background-blend-mode: multiply;
   }
@@ -1394,6 +1444,10 @@ i.fas{
   }
   .footer-copyright p{
     text-align: right;
+  }
+
+  .org-links li {
+    align-self: flex-end;
   }
 
 }
