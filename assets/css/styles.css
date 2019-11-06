@@ -488,18 +488,6 @@ figure.photo-frame figcaption,
   min-width: 0;
 }
 
-.cards-collection {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: 5000px;
-  justify-content: flex-start;
-  /*align-items: str; */
-  align-content: space-around; /* gutters */
-  max-width: 900px;
-}
-
-
 .card {
   display: flex;
   flex-direction: column;
@@ -507,13 +495,23 @@ figure.photo-frame figcaption,
   padding: 0;
 }
 
+.cards-collection {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: auto;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: space-around;
+  margin: 0 auto;
+}
+
 .card-collection {
   margin-bottom: 0.75em;
   background: rgba(177, 171, 106, 0.25);
   border-radius: 5px;
-  min-width: 125px;
-  flex: 0;
-  max-width: 250px;
+  flex: 1 1 auto;
+  width: 100%;
 }
 
 .card-collection:first-child{
@@ -529,7 +527,7 @@ figure.photo-frame figcaption,
   margin-top: 2em;
 }
 
-.card-collection:nth-child(15n) {
+.card-collection:nth-child(13n) {
   margin-top: 4.75em;
 }
 
@@ -1104,9 +1102,6 @@ i.fas{
     width: 100%;
   }
 
-
-
-
   .ot-4 {
     justify-content: flex-end;
     margin-top: auto;
@@ -1218,8 +1213,6 @@ i.fas{
     text-align: right;
   }
 
-
-
 }
 
 @media(min-width: 525px){
@@ -1231,7 +1224,12 @@ i.fas{
 }
 
 @media(min-width: 900px){
+  .cards-collection {
+    flex-wrap: wrap;
+    height: 3750px;
+  }
   .card-collection {
+    flex: 0 1 auto;
     max-width: 275px;
   }
 }
@@ -1245,10 +1243,6 @@ i.fas{
 @media(min-width: 800px){
   .half-col {
     width: 48%;
-  }
-
-  .cards-collection {
-    height: 3600px;
   }
 
   figure.photo-frame,
@@ -1265,14 +1259,14 @@ i.fas{
     font-size: 1rem;
   }
 
-  .collection-card{
-    flex: 0 1 48%;
+  .cards-collection {
+    flex-wrap: wrap;
+    height: 5500px;
   }
-
   .card-collection {
+    flex: 0 1 0;
     max-width: 300px;
   }
-
 
 }
 
@@ -1380,7 +1374,7 @@ i.fas{
     width: 96%;
     float: none;
   }
-
+/*
   .cards-collection{
     max-width: 90%;
     margin: 0 auto;
@@ -1395,7 +1389,7 @@ i.fas{
   .card-collection {
     max-width: 100%;
   }
-
+*/
 }
 /* iphone x over 800px height */
 @media(max-width: 420px)
