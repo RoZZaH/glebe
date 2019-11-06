@@ -3,13 +3,40 @@ layout: "base.njk"
 ---
 
 <main>
-Find Glebe House
-Glebe is located eighteen kilometres from Letterkenny on the R251.
+<!-- from glebegallery.ie 
+<div class=et_pb_map data-center-lat=55.141242090728234 data-center-lng=-7.669738827343746 data-zoom=9 data-mouse-wheel=on data-mobile-dragging=on></div>
+<div class=et_pb_map_pin data-lat=55.0044336 data-lng=-7.9031982999999855 data-title="Glebe House and Gallery">
 
-There is car and coach parking available free on site.
+-->
 
-Accessibility
-Glebe House and Gallery is fully committed to accessibility for all users, where possible. Glebe House has limited access, as have the gardens (steps and steep slopes are also present). There is wheelchair access to the ground floor in the Gallery, and in the Tearooms. Designated parking is available in the carpark. Universal access toilets are also present at Glebe House and Gallery.
 
-Please contact us for more information prior to your visit, if you require universal access in any way.
+<h2>Finding Glebe House</h2>
+<p>Glebe House and Gallery is located outside the village of <b>Churchill</b>,<br> 18 kilometres from Letterkenny on the <b>R251</b>.</p>
+<p>There is car and coach parking available free on site.</p>
+    <div id="map"></div>
+    <script>
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  var glebe = {lat: 55.0044336, lng: -7.9031982999999855};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 9, center: {lat: 55.141242090728234, -7.66973882734374}});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: glebe, map: map});
+}
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpuYBASVb_9RnJdBUlokO6dd46OK0dLgk&callback=initMap">
+    </script>
+<h2>Accessibility</h2>
+<p>Glebe House and Gallery is fully committed to accessibility for all users, where possible. Glebe House has limited access, as have the gardens (steps and steep slopes are also present). There is wheelchair access to the ground floor in the Gallery, and in the Tearooms. Designated parking is available in the carpark. Universal access toilets are also present at Glebe House and Gallery.</p>
+
+<p>Please contact us on <a class="no-dec" href="tel:+353749137071"><i class="fas fa-phone-alt"></i>&nbsp; <span class="under-dotted">+353 74 913 7071</span></a> or &nbsp;<a class="no-dec" href="mailto:glebegallery@opw.ie"><i class="fas fa-at"></i>&nbsp; <span class="under-dotted">glebe&#64;galleryopw&#46;ie</span></a> for more information prior to your visit, if you require universal access in any way.</p>
+
 </main>

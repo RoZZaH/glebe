@@ -1031,6 +1031,21 @@ i.fas{
 
 @media (min-width: 600px)
        and (max-width: 675px){
+
+  .cards-collection {
+    flex-wrap: wrap;
+    height: 3750px;
+  }
+  .card-collection {
+    flex: 0 1 auto;
+    max-width: 275px;
+  }
+  
+}
+
+
+@media(max-width: 675px){
+
   body {
     font-size: 0.9rem;
   }
@@ -1124,14 +1139,7 @@ i.fas{
     width: 96%;
     float: none;
   }
-  .cards-collection {
-    flex-wrap: wrap;
-    height: 3750px;
-  }
-  .card-collection {
-    flex: 0 1 auto;
-    max-width: 275px;
-  }
+
 }
 
 @media (min-width: 675px){
