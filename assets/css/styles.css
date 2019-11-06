@@ -959,6 +959,181 @@ i.fas{
   text-align: center;
 }
 
+
+
+
+
+@media(max-width: 320px)
+  and (orientation : portrait){
+    body {
+      font-size: 0.85rem;
+    }
+    .subtitle {
+      margin: 5px;
+    }
+    .key-info {
+    padding: 2px 0;
+  }
+}
+
+
+/* iphone x over 800px height */
+@media(max-width: 420px)
+  and (orientation : portrait){
+   body {
+      font-size: 0.9rem;
+  }
+  header {
+    width: 100vw;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  #header-img {
+    /*background-size: auto 100%; */
+    object-fit: contain;
+  }
+  .subtitle {
+    margin: 0.25em;
+  }
+  .key-info {
+    padding: 1.2em 0;
+  }
+
+  .cards-collection {
+    flex-wrap: nowrap;
+    height: auto;
+  }
+  .card-collection {
+    flex: 0 1 auto;
+    max-width: 100%;
+  }
+
+}
+
+
+@media(min-width: 525px){
+  p.form-heading,
+  .flex-form-outter li p,
+  .flex-form-outter > li > label {
+    padding: 0px;
+  }
+}
+
+@media(min-width: 600px){
+  .form-block-3 label {
+    margin-right: 1em;
+  }
+  .col-mobile,
+  .form-block-3 div {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 600px)
+       and (max-width: 675px){
+  body {
+    font-size: 0.9rem;
+  }
+  .container {
+    margin: auto;
+  }
+
+  .container-flex {
+    flex-direction: column;
+  }
+
+  header {
+    justify-content: flex-end;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .site-title, header nav {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .key-info {
+    order: 0;
+    margin-bottom: 0;
+    background-color: rgba(4, 95, 199, 1);
+  }
+  .key-times {
+    order: 0;
+  }
+
+  .key-info ul {
+    align-items: flex-end; 
+  }
+
+  .site-title {
+    text-align: center;
+  }
+
+  .opening-times {
+    font-size: 0.9rem;
+    white-space: pre-line;
+    margin-bottom: 0; 
+  }
+  
+  .key-item ul {
+    justify-content: space-around;
+  }
+  .key-item span.sr {
+    position: absolute !important; /* Outside DOM */
+    height: 1px; width: 1px; /* Nearly Collapsed */
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+  }
+
+
+  nav ul {
+    flex-direction: column;
+    border: 1px solid grey;
+    width: 100%;
+  }
+
+  nav li {
+    clip-path: none;
+    border-bottom: 1px solid grey;
+  }
+
+  nav li:last-of-type {
+    border: 0;
+  }
+
+  .ot-3, .ot-4 {
+    position: relative;
+    top: 2em;
+  }
+  
+  .opening-section + hr {
+    position: relative;
+    top: 1em;
+  }
+
+  .footer-cols > div {
+    flex: 0 0 1; 
+  } 
+
+  .float-text-left figure {
+    margin: 0.25em auto;
+    width: 96%;
+    float: none;
+  }
+  .cards-collection {
+    flex-wrap: wrap;
+    height: 3750px;
+  }
+  .card-collection {
+    flex: 0 1 auto;
+    max-width: 275px;
+  }
+}
+
 @media (min-width: 675px){
 
   .container-flex {
@@ -1215,45 +1390,9 @@ i.fas{
 
 }
 
-@media(min-width: 525px){
-  p.form-heading,
-  .flex-form-outter li p,
-  .flex-form-outter > li > label {
-    padding: 0px;
-  }
-}
 
-@media(min-width: 900px){
-  .cards-collection {
-    flex-wrap: wrap;
-    height: 3750px;
-  }
-  .card-collection {
-    flex: 0 1 auto;
-    max-width: 275px;
-  }
-}
-
-@media(max-width: 900px){
-  .key-numbers {
-    white-space: pre-line;
-  }
-}
-
-@media(min-width: 800px){
-  .half-col {
-    width: 48%;
-  }
-
-  figure.photo-frame,
-  .gardens .float-text-left figure,
-  .gardens .float-text-right figure {
-  --surround: 20px;
-  }
-
-}
-
-@media(max-width: 780px){
+@media(min-width: 675px)
+       and (max-width: 780px){
 
   body {
     font-size: 1rem;
@@ -1270,160 +1409,34 @@ i.fas{
 
 }
 
-@media(min-width: 600px){
-  .form-block-3 label {
-    margin-right: 1em;
+@media(min-width: 800px){
+  .half-col {
+    width: 48%;
   }
-  .col-mobile,
-  .form-block-3 div {
-    justify-content: flex-start;
+
+  figure.photo-frame,
+  .gardens .float-text-left figure,
+  .gardens .float-text-right figure {
+  --surround: 20px;
   }
+
 }
 
-@media (max-width: 675px){
-  body {
-    font-size: 0.9rem;
-  }
-  .container {
-    margin: auto;
-  }
-
-  .container-flex {
-    flex-direction: column;
-  }
-
-  header {
-    justify-content: flex-end;
-    min-height: 100vh;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-  .site-title, header nav {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-  .key-info {
-    order: 0;
-    margin-bottom: 0;
-    background-color: rgba(4, 95, 199, 1);
-  }
-  .key-times {
-    order: 0;
-  }
-
-  .key-info ul {
-    align-items: flex-end; 
-  }
-
-  .site-title {
-    text-align: center;
-  }
-
-  .opening-times {
-    font-size: 0.9rem;
+@media(max-width: 900px){
+  .key-numbers {
     white-space: pre-line;
-    margin-bottom: 0; 
   }
-  
-  .key-item ul {
-    justify-content: space-around;
-  }
-  .key-item span.sr {
-    position: absolute !important; /* Outside DOM */
-    height: 1px; width: 1px; /* Nearly Collapsed */
-    overflow: hidden;
-    clip: rect(1px 1px 1px 1px);
-  }
+}
 
-
-  nav ul {
-    flex-direction: column;
-    border: 1px solid grey;
-    width: 100%;
+@media(min-width: 900px){
+  .cards-collection {
+    flex-wrap: wrap;
+    height: 3750px;
   }
-
-  nav li {
-    clip-path: none;
-    border-bottom: 1px solid grey;
-  }
-
-  nav li:last-of-type {
-    border: 0;
-  }
-
-  .ot-3, .ot-4 {
-    position: relative;
-    top: 2em;
-  }
-  
-  .opening-section + hr {
-    position: relative;
-    top: 1em;
-  }
-
-  .footer-cols > div {
-    flex: 0 0 1; 
-  } 
-
-  .float-text-left figure {
-    margin: 0.25em auto;
-    width: 96%;
-    float: none;
-  }
-/*
-  .cards-collection{
-    max-width: 90%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    height: auto;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
   .card-collection {
-    max-width: 100%;
+    flex: 0 1 auto;
+    max-width: 275px;
   }
-*/
-}
-/* iphone x over 800px height */
-@media(max-width: 420px)
-  and (orientation : portrait){
-   body {
-      font-size: 0.9rem;
-  }
-  header {
-    width: 100vw;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-  #header-img {
-    /*background-size: auto 100%; */
-    object-fit: contain;
-  }
-  .subtitle {
-    margin: 0.25em;
-  }
-  .key-info {
-    padding: 1.2em 0;
-  }
-
 }
 
-@media(max-width: 320px)
-  and (orientation : portrait){
-    body {
-      font-size: 0.85rem;
-    }
-    .subtitle {
-      margin: 5px;
-    }
-    .key-info {
-    padding: 2px 0;
-  }
-}
+
