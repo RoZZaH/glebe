@@ -3,45 +3,20 @@ layout: "base.njk"
 ---
 
 <main>
-<!-- from glebegallery.ie 
-<div class=et_pb_map data-center-lat=55.141242090728234 data-center-lng=-7.669738827343746 data-zoom=9 data-mouse-wheel=on data-mobile-dragging=on></div>
-<div class=et_pb_map_pin data-lat=55.0044336 data-lng=-7.9031982999999855 data-title="Glebe House and Gallery">
+<div class="container-flex section-directions">
+    <div class="half-col">
+    <h2>Finding Glebe House</h2>
+    <p>Glebe House and Gallery is located in the village of <b>Churchill</b>, 18 kilometres from Letterkenny on the <b>R251</b>.</p>
+    <p>There is car and coach parking available free on site.</p>
+    </div>
+    <div class="half-col">
+        <figure class="photo-frame"><img src="{{ '/assets/img/churchill-village.jpg' | url }}" alt="A photograph of the picturesque village of Churchill, featuring a row of white-washed workers' cottages a hedgerow and the local church">
+        <figcaption>The picturesque village of Churchill in Glenveagh National Park, Co. Donegal.</figcaption>
+        </figure>
+    </div>
+</div>  
+    <div style="height: 400px; margin-bottom: 1em;"><iframe style="width:100%;height:100%" src="https://maps.google.com/maps?height=400&amp;hl=en&amp;coord=55.004383, -7.903299&amp;q=Churchill%20Co.Donegal+(Glebe%20House)&amp;ie=UTF8&amp;t=&amp;z=9&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/coordinates.html">gps coordinates</a></iframe></div>
 
--->
-
-
-<h2>Finding Glebe House</h2>
-<p>Glebe House and Gallery is located outside the village of <b>Churchill</b>,<br> 18 kilometres from Letterkenny on the <b>R251</b>.</p>
-<p>There is car and coach parking available free on site.</p>
-<style>
- #map {
-   width: 100%;
-   height: 400px;
-   background-color: grey;
- }
- </style>
-    <div id="map"></div>
-    <script>
-    // Initialize and add the map
-    function initMap() {
-    // The location of Uluru
-    var glenveagh = {lat: 55.0044336, lng: -7.9031982999999855};
-    var glebe = {lat: 55.141242090728234, lng: -7.66973882734374};
-    // The map, centered at Uluru
-    var map = new google.maps.Map(
-        document.getElementById('map'), {zoom: 7, center: glenveagh});
-    // The marker, positioned at Uluru
-    var marker = new google.maps.Marker({position: glebe, map: map});
-    }
-    </script>
-    <!--Load the API from the specified URL
-    * The async attribute allows the browser to render the page while the API loads
-    * The key parameter will contain your own API key (which is not needed for this tutorial)
-    * The callback parameter executes the initMap() function
-    -->
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpuYBASVb_9RnJdBUlokO6dd46OK0dLgk&callback=initMap">
-    </script>
 <h2>Accessibility</h2>
 <p>Glebe House and Gallery is fully committed to accessibility for all users, where possible. Glebe House has limited access, as have the gardens (steps and steep slopes are also present). There is wheelchair access to the ground floor in the Gallery, and in the Tearooms. Designated parking is available in the carpark. Universal access toilets are also present at Glebe House and Gallery.</p>
 
