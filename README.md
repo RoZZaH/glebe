@@ -1,7 +1,7 @@
 # Glebe House & Gallery
 Milestone Project One: User-Centric Frontend Development - Code Institute 
 
-This project is a speculative redesign of an <abbr title="Office of Public Works">OPW</abbr> website for Glebe House and Gallery in Donegal. The project is not a 1-to-1 representation of the [original site](https://www.glebegallery.ie) but a 'mobile-first' redesign using flexbox.
+This project is a speculative redesign of an <abbr title="Office of Public Works">OPW</abbr> website for Glebe House and Gallery in Donegal. The project is not a 1-to-1 recodesentation of the [original site](https://www.glebegallery.ie) but a 'mobile-first' redesign using flexbox.
 
 
 ## Demo
@@ -26,7 +26,7 @@ As a visually impaired user I want the site to make sense to me and be easy to n
 In contrast to the existing site, I tried to put the key information about Glebe House and how a group visit might be arranged front and centre on the homepage. I also wanted to simplify the overall structure and mavigation and more efficent use of some of the great images the OPW has by using tinted images in the header.
 
 ### Scope
-It's clear the OPW's Glebe Gallery website has a wide audience and many stakeholders (such as the Tea Rooms) - while my redesign is not a 1-to-1 representation I tried to cover the most pertient information and facilities, it was probably a bit ambitious to try to reinterpret the entire site; I avoided creating an online tour of the house but this could be implemented as posts.  
+It's clear the OPW's Glebe Gallery website has a wide audience and many stakeholders (such as the Tea Rooms) - while my redesign is not a 1-to-1 recodesentation I tried to cover the most pertient information and facilities, it was probably a bit ambitious to try to reintercodet the entire site; I avoided creating an online tour of the house but this could be implemented as posts.  
 
 ### Structure
 The home page I designed contains the main messages and functionality up front which are easy to get back to from the common header and footer across the site. This information is supplemented by longer 'article' style pages giving the history of Glebe House and the facilities outside - the gardens and tea-rooms. Events and the collection pages give a short introuction followed by a series of 'posts'.
@@ -35,7 +35,7 @@ The home page I designed contains the main messages and functionality up front w
 Initially I concentrated on getting a responsive header with navigation that would adapt to different resolutions. Then I implemented similiar sections or content splits as the original site such as two columns and one third / two thirds columns. I used page sections, floated images and dividers where appropriate, i.e. for longer pages, and designed 'components' for repeatable blocks of code such as the event posts and the art collection cards. 
 
 ### Surface
-I tried to use a restrained palette to compliment the images and furnishings of the house. I also used a serif font for headings but sans-serif for easy reading and scaling on the main content. I used css effects such as <pre>blend mode</pre>, border image, <pre>clip-path</pre> and <pre>object-fit</pre> rather than treat the images in a graphics package.
+I tried to use a restrained palette to compliment the images and furnishings of the house. I also used a serif font for headings but sans-serif for easy reading and scaling on the main content. I used css effects such as <code>blend mode</code>, border image, <code>clip-path</code> and <code>object-fit</code> rather than treat the images in a graphics package.
 
 ## Technologies
 1. HTML
@@ -48,11 +48,11 @@ I tried to use a restrained palette to compliment the images and furnishings of 
 I consciously chose not use a framework like Bootstrap, and to stretch myself and reinforce my knowledge of Flexbox; content reflows and sometimes reorders to make more sense on smaller screens. I used some CSS Transitions to get some user feedback on the contact form.
 
 ### Features Left to Implement
-I took inspiration for the Opening Times header info from <abbr title="Irish Museum of Modern Art">IMMA</abbr> website, I would like to implement this programmatically using Javascript or similiar - I believe there you can use JSON to add this which is also discoverable by Google My Business and displays opening and closing times in search results as well as your website. They also have a nice feature showing various transport information to get to the Museum - there's no Luas in Donegal but it's a nice feature. I tried to implement a switch of checked/not:checked to toggle visibility of some of the form fields, like [this](https://codepen.io/memco/pen/BajpD) depending on whether you choose between an educational tour or a tourist one but it broke when I redesigned my form using <pre>li</pre>'s. Also the form needs to be hooked up using Netlify or a similar service. I would probably implement a 'hamburger' menu/icon for mobile (or possibly breadcrumbs). Also the art collection cards should have a hover or lightbox effect to view at a larger full-screen. 
+I took inspiration for the Opening Times header info from <abbr title="Irish Museum of Modern Art">IMMA</abbr> website, I would like to implement this programmatically using Javascript or similiar - I believe there you can use JSON to add this which is also discoverable by Google My Business and displays opening and closing times in search results as well as your website. They also have a nice feature showing various transport information to get to the Museum - there's no Luas in Donegal but it's a nice feature. I tried to implement a switch of checked/not:checked to toggle visibility of some of the form fields, like [this](https://codepen.io/memco/pen/BajpD) depending on whether you choose between an educational tour or a tourist one but it broke when I redesigned my form using <code>li</code>'s. Also the form needs to be hooked up using Netlify or a similar service. I would probably implement a 'hamburger' menu/icon for mobile (or possibly breadcrumbs). Also the art collection cards should have a hover or lightbox effect to view at a larger full-screen. 
 
 
 ## Testing
-The site was extensively tested using Chrome Developer Tools - this however didn't always give an accurate representaion of the site as viewed on a device - so I deployed and checked using an iPad mini and iPhone; it was only by using this strategy and also Firefox's Developer Tools, which has some tools for inspecting flexbox and grid layouts, that I could track down a bug for the Art Collection cards - there was a problem that turned out to be a media query. Even though I had a set cards to flow in a particular way at different resolutions, a max-width query was over-riding it; this was a lesson to me that while software tools are very useful, real world testing on target devices is also needed.
+The site was extensively tested using Chrome Developer Tools - this however didn't always give an accurate recodesentaion of the site as viewed on a device - so I deployed and checked using an iPad mini and iPhone; it was only by using this strategy and also Firefox's Developer Tools, which has some tools for inspecting flexbox and grid layouts, that I could track down a bug for the Art Collection cards - there was a problem that turned out to be a media query. Even though I had a set cards to flow in a particular way at different resolutions, a max-width query was over-riding it; this was a lesson to me that while software tools are very useful, real world testing on target devices is also needed.
 
 There is no javascript/form validation but the contact form is coded correctly for required fields.
 
@@ -62,12 +62,12 @@ I downloaded [NVDA screen-reader](https://www.nvaccess.org) and tested the site 
 
 
 ## Deployment
-This site is hosted using GitHub pages and deployed on it's own gh-pages branch. The deployment happens automatically becasue a service called Travis CI (Continous Improvement) watches the master branch of the **glebe** repository (via API access). My understanding is it uses the file <pre>.tavis.yml</pre> to spin up a temporay virtual machine and run it's own copy of eleventy on a copy of the '_src' files and push the resulting '_site' files to gh-pages.
+This site is hosted using GitHub pages and deployed on it's own gh-pages branch. The deployment happens automatically becasue a service called Travis CI (Continous Improvement) watches the master branch of the **glebe** repository (via API access). My understanding is it uses the file <code>.tavis.yml</code> to spin up a temporay virtual machine and run it's own copy of eleventy on a copy of the '_src' files and push the resulting '_site' files to gh-pages.
 
 To run locally, you can of course clone the repository and access the '_site' folder as html/css; if you want to edit or build the site as coded you'll need to install a copy of **11ty** which is quite straight forward using npm.
-<code>
+<pre>
 npm install -g @11ty/eleventy
-</code>
+</pre>
 See [11ty/eleventy](https://www.11ty.io/) for documentation.
 
 
