@@ -14,7 +14,7 @@
     --dark-orange: rgb(211, 69, 3);
     --orange: orange;
     --light-orange: rgb(228, 134, 91);
-    --offwhite-blue: rgb(255, 244, 233);
+    --offwhte-cream: rgb(255, 244, 233);
     --brown: brown;
     --khaki: #c4965b;
     --twitter-blue: #22b8cf;
@@ -33,7 +33,7 @@ body {
       font-size: 1.125rem;
       font-weight: 300; /* light font-weight */
       color: var(--dark-grey);
-      background: var(--offwhite-blue);
+      background: var(--offwhte-cream);
   }
   
 
@@ -112,43 +112,6 @@ h1 {
     font-weight: 700; /* bold 700 or bolder */
   }
 
-  /* figure + img defaults */
-
-  figure {
-    --surround: 12px;
-    position: relative;
-    top: 0;
-    right: 0;
-    margin: 0;
-    margin-bottom: 1.5em;
-    border: 1px solid var(--grey);
-    padding: var(--surround);
-    background: var(--white);
-    max-width: 100%;
-    }
-  
-  img,
-  figure > img {
-    margin: 0;
-    border: 0;
-    padding: 0;
-    max-width: 100%;
-  }
-
-  figcaption  {
-    position: absolute;
-    bottom: calc(var(--surround) + 3px); /* +2px for border */
-    margin: 0;
-    border: 0;
-    padding: 0.5em 0.8em;
-    width: calc(100% - 2 * var(--surround));
-    background: rgba(0, 0, 0, .6);
-    font-size: 0.8rem;
-    color: white;
-    z-index: 3;
-  }
-
-
 /* modifier classes */
   .tc {
     text-transform: capitalize;
@@ -216,9 +179,9 @@ h1 {
   }
 
 
-/* ================
+/* ================================
 Gen Layout Containers + dividers hr
-================= */
+================================ */
 
   .container {
     width: 96%;
@@ -372,7 +335,7 @@ nav ul {
 }
 
 nav li {
-    background: var(--offwhite-blue);
+    background: var(--offwhte-cream);
     flex: 1;
     /* https://css-tricks.com/notched-boxes/ || bennettfeely.com/clippy/ */
     clip-path: 
@@ -382,7 +345,7 @@ nav li {
         calc(100% - 0.5px) 20px, /* (tr, tr) create tiny right gap */
         calc(100% - 0.5px) 101%, /* (br, br) */
         0% 101%);  /* (bl, bl) rid of tiny gap */
-    border-bottom: 4px solid var(--offwhite-blue);
+    border-bottom: 4px solid var(--offwhte-cream);
 }
 
 nav a {
@@ -413,6 +376,42 @@ nav a:focus {
 Figures + Floats
 ================ */
 
+
+figure {
+  --surround: 12px;
+  position: relative;
+  top: 0;
+  right: 0;
+  margin: 0;
+  margin-bottom: 1.5em;
+  border: 1px solid var(--grey);
+  padding: var(--surround);
+  background: var(--white);
+  max-width: 100%;
+  }
+
+img,
+figure > img {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+figcaption  {
+  position: absolute;
+  bottom: calc(var(--surround) + 3px); /* +2px for border */
+  margin: 0;
+  border: 0;
+  padding: 0.5em 0.8em;
+  width: calc(100% - 2 * var(--surround));
+  background: rgba(0, 0, 0, .6);
+  font-size: 0.8rem;
+  color: white;
+  z-index: 3;
+}
+
+
 .float-text-left > p {
   width: 100%;
 }
@@ -426,7 +425,6 @@ Figures + Floats
 .float-text-right figure {
   margin-right: 1.5em;
 }
-
 
 .gardens h2 {
   margin-top: 1.5em;
@@ -444,7 +442,6 @@ Figures + Floats
   transform: rotate(-2deg);
   margin-left: 1em;
 }
-
 
 
 /* =================
@@ -476,13 +473,15 @@ Figures + Floats
   padding: 0;
 }
 
+/* Derek Hill Collection Cards */
+
 .cards-collection {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   height: auto;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   align-content: space-around;
   margin: 0 auto;
 }
@@ -492,10 +491,11 @@ Figures + Floats
   background: rgba(177, 171, 106, 0.25);
   border-radius: 5px;
   flex: 1 1 auto;
-  width: 100%;
+  width: 90%;
 }
 
-/*
+/* break up rigidty of card columns */
+
 .card-collection:first-child{
   margin-top: 2.5em;
 }
@@ -504,7 +504,6 @@ Figures + Floats
   margin-top: 0.55em;
 }
 
-
 .card-collection:nth-child(10n) {
   margin-top: 2em;
 }
@@ -512,15 +511,6 @@ Figures + Floats
 .card-collection:nth-child(13n) {
   margin-top: 4.75em;
 }
-
-
-.card-collection-fig {
-  margin: 0;
-  padding: 0;
-}
-*/
-
-
 
 .card-collection figure {
   padding: 0;
@@ -556,38 +546,40 @@ Figures + Floats
 }
 
 .card-collection-info p {
-  margin: 0; /* strange behaviour margin top only puts margin on top and bottom - md was putting p tags*/
+  margin: 0; /* strange behaviour margin top only puts margin on top and bottom - .md files putting p tags*/
   font-size: 0.85rem;
   padding: 0 0.75em 1.25em;
 }
 
-.opening-section, .booking-section {
- flex-flow: row wrap;
+/* Events Page .md articles/post */
+.article-recent {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+
+.article-recent-main {
+  order: 2;
+}
+
+.article-recent-secondary {
+  order: 1;
+}
+
+h3.article-title{ 
+  color: var(--donegal-green);
+  margin-bottom: 0.25em;
+}
+h4.article-title {
+  color: var(--light-green);
+  margin-bottom: 0.5em;
 }
 
 
-ul.dashed {
-  list-style-type: none;
-}
-ul.dashed > li {
-  text-indent: -20px;
-}
-ul.dashed > li:before {
-  content: "\2013";
-  text-indent: -5px;
-}
+/* =====================================
+Homepage - Opening Times definition list
+===================================== */
 
-.ticket-price {
-  display: inline-block;
-  width: 4ch;
-  text-align: right;
-  font-size: 1.1em;
-  font-weight: 400;
-}
-
-/* =================
-Opening Times - homepage
-================= */
 dl {
   margin: 0;
   padding: 0;
@@ -629,16 +621,39 @@ dd:last-of-type {
   max-width: 100%;
 }
 
+.opening-section, .booking-section {
+  flex-flow: row wrap;
+ }
+
 .opening-section + hr {
   position: relative;
   top: 1em;
 }
 
+/* ticket pricing */
+ 
+ ul.dashed {
+   list-style-type: none;
+ }
+ ul.dashed > li {
+   text-indent: -20px;
+ }
+ ul.dashed > li:before {
+   content: "\2013";
+   text-indent: -5px;
+ }
+ 
+ .ticket-price {
+   display: inline-block;
+   width: 4ch;
+   text-align: right;
+   font-size: 1.1em;
+   font-weight: 400;
+ }
 
-
-/* =================
-Contact Form
-================= */
+/* ====================
+Homepage Contact Form
+==================== */
 
  form {
   background: MistyRose;
@@ -732,7 +747,7 @@ textarea,
 select {
   padding: .25em 0.5em;
   border: 1px solid brown;
-  background: var(--offwhite-blue);
+  background: var(--offwhte-cream);
 }
 
 input, select, textarea {
@@ -797,29 +812,7 @@ button:focus {
   transform: scale(1.05);
 }
 
-
-.article-recent {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 2em;
-}
-
-.article-recent-main {
-  order: 2;
-}
-
-.article-recent-secondary {
-  order: 1;
-}
-
-h3.article-title{ 
-  color: var(--donegal-green);
-  margin-bottom: 0.25em;
-}
-h4.article-title {
-  color: var(--light-green);
-  margin-bottom: 0.5em;
-}
+/* end of wrapper before footer */
 
 #buffer {
   position: relative;
@@ -857,8 +850,6 @@ a.back-to-top:focus {
 a.back-to-top:hover .under-dotted {
   border-bottom: 1px dotted var(--light-blue);
 }
-
-
 
 /* ===============
    FOOTER 
@@ -959,7 +950,7 @@ i.fas{
 }
 
 .social-icons li {
-  background: var(--offwhite-blue);
+  background: var(--offwhte-cream);
   border-radius: 5px;
   padding: 8px 12px;
 }
@@ -991,8 +982,6 @@ i.fas{
   color: var(--dark-orange);
 }
 
-
-
 .org-links ul {
   margin-left: 0;
   padding-left: 0;
@@ -1006,8 +995,9 @@ i.fas{
 }
 
 
-
-
+/* ===============
+   Media Queries
+=============== */
 
 @media(max-width: 320px)
   and (orientation : portrait){
@@ -1021,7 +1011,6 @@ i.fas{
     padding: 2px 0;
   }
 }
-
 
 /* iphone x over 800px height */
 @media(max-width: 420px)
@@ -1079,6 +1068,7 @@ i.fas{
        and (max-width: 675px){
 
   .cards-collection {
+    align-items: flex-start;
     flex-wrap: wrap;
     height: 3750px;
   }
@@ -1089,7 +1079,7 @@ i.fas{
 
 }
 
-
+/* main break point */
 @media(max-width: 675px){
 
   body {
@@ -1208,8 +1198,6 @@ i.fas{
 
   .collection {
     margin: 0;
-   /* max-width: 900px;
-    max-height: 4000px; */
   }
 
   .divider {
@@ -1281,7 +1269,7 @@ i.fas{
 
   .float-text-left figure {
     position: relative;
-    //margin-left: 2%;
+    /* margin-left: 2%; */
     float: right;
     clear: right;
   }
@@ -1291,7 +1279,7 @@ i.fas{
   }
   
   .float-text-right figure {
-    //margin-right: 3%;
+    /* margin-right: 3%; */
     max-width: 47%;
     float: left;
     clear: right;
@@ -1326,10 +1314,11 @@ i.fas{
     width: 50%;
   }
 
+  /* not needed with default fig styles
   figure.photo-frame {
   //  width: 100%;
   }
-
+ */
   .ot-4 {
     justify-content: flex-end;
     margin-top: auto;
@@ -1396,7 +1385,7 @@ i.fas{
   .ot-3, .ot-4, .opening-section + hr {
     position: initial;
   }
-
+  /* painterly footer for tablet + desktop */
   footer {
     margin-top: 3.5em;
     --bottom-padding: 3.5em;
@@ -1474,6 +1463,7 @@ i.fas{
     width: 48%;
   }
 
+  /* larger photo/img mount at higher res */
   figure.photo-frame,
   .gardens .float-text-left figure,
   .gardens .float-text-right figure {
