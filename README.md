@@ -1,7 +1,7 @@
 # Glebe House & Gallery
 Milestone Project One: User-Centric Frontend Development - Code Institute 
 
-This project is a speculative redesign of an <abbr title="Office of Public Works">OPW</abbr> website for Glebe House and Gallery in Donegal. The project is not a 1-to-1 recodesentation of the [original site](https://www.glebegallery.ie) but a 'mobile-first' redesign using flexbox.
+This project is a speculative redesign of an <abbr title="Office of Public Works">OPW</abbr> website for Glebe House and Gallery in Donegal. The project is not a 1-to-1 representation of the [original site](https://www.glebegallery.ie) but a 'mobile-first' redesign using flexbox.
 
 
 ## Demo
@@ -12,21 +12,21 @@ A live demo can be found [here](https://rozzah.github.io/glebe/)
 
 ### User stories
 
-As a tourist or visitor, I expect to be able to see the key information such as opening times and contact phone numbers and directions immediately and understand quickly what Glebe House is and why I might like to visit. 
+- As a tourist or visitor, I expect to be able to see the key information such as opening times and contact phone numbers and directions immediately and understand quickly what Glebe House is and why I might like to visit. 
 
-As a tour-guide or teacher I want to able to get to a tour booking form quickly.
+- As a tour-guide or teacher I want to able to get to a tour booking form quickly.
 
-As a local resident I want to see any upcoming exhibitions or talks at the gallery.
+- As a local resident I want to see any upcoming exhibitions or talks at the gallery.
 
-As a student I want to learn more about the house and the artisit Derek Hill and his art collection.
+- As a student I want to learn more about the house and the artisit Derek Hill and his art collection.
 
-As a visually impaired user I want the site to make sense to me and be easy to navigate.
+- As a visually impaired user I want the site to make sense to me and be easy to navigate.
 
 ### Strategy
 In contrast to the existing site, I tried to put the key information about Glebe House and how a group visit might be arranged front and centre on the homepage. I also wanted to simplify the overall structure and mavigation and more efficent use of some of the great images the OPW has by using tinted images in the header.
 
 ### Scope
-It's clear the OPW's Glebe Gallery website has a wide audience and many stakeholders (such as the Tea Rooms) - while my redesign is not a 1-to-1 recodesentation I tried to cover the most pertient information and facilities, it was probably a bit ambitious to try to reintercodet the entire site; I avoided creating an online tour of the house but this could be implemented as posts.  
+It's clear the OPW's Glebe Gallery website has a wide audience and many stakeholders (such as the Tea Rooms) - while my redesign is not a 1-to-1 representation I tried to cover the most pertient information and facilities, it was probably a bit ambitious to try to reintercodet the entire site; I avoided creating an online tour of the house but this could be implemented as posts.  
 
 ### Structure
 The home page I designed contains the main messages and functionality up front which are easy to get back to from the common header and footer across the site. This information is supplemented by longer 'article' style pages giving the history of Glebe House and the facilities outside - the gardens and tea-rooms. Events and the collection pages give a short introuction followed by a series of 'posts'.
@@ -58,11 +58,11 @@ There is no javascript/form validation but the contact form is coded correctly f
 
 I avoided using 'target="_blank"' for external links, I believe that unless it's a download link '_blank' breaks the back button which is especially unhelpful for mobile users or those using assistive technology.
 
-I downloaded [NVDA screen-reader](https://www.nvaccess.org) and tested the site to make sure it make accessible. This is why I used longer wording in places, so the site would 'sound' right. This is becoming something that web designers need to think about, not just for users with accessibility issues, but also from people accessing the site and information is new ways for example 'voice assistants' such as *Alexa* and Google.
+I downloaded [NVDA screen-reader](https://www.nvaccess.org) and tested the site to make sure it make accessible. This is why I used longer wording in places, so the site would 'sound' right when read. This is becoming something that web designers need to think about, not just for users with accessibility issues, but also from people accessing the site and information in new ways for example 'voice assistants' such as *Alexa* and Google.
 
 
 ## Deployment
-This site is hosted using GitHub pages and deployed on it's own gh-pages branch. The deployment happens automatically becasue a service called Travis CI (Continous Improvement) watches the master branch of the **glebe** repository (via API access). My understanding is it uses the file <code>.tavis.yml</code> to spin up a temporay virtual machine and run it's own copy of eleventy on a copy of the '_src' files and push the resulting '_site' files to gh-pages.
+This site is hosted using GitHub pages and deployed on it's own gh-pages branch. The deployment happens automatically becasue a service called Travis CI (Continous Improvement) watches the master branch of the **glebe** repository (via API access). My understanding is it uses the file <code>.tavis.yml</code> to spin up a temporary virtual machine and run it's own copy of eleventy on a copy of the '_src' files and push the resulting '_site' files to gh-pages.
 
 To run locally, you can of course clone the repository and access the '_site' folder as html/css; if you want to edit or build the site as coded you'll need to install a copy of **11ty** which is quite straight forward using npm.
 <pre>
